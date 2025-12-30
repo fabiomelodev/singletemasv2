@@ -93,7 +93,7 @@
     <!-- end resources -->
 
     <!-- details -->
-    {{-- @include('pages.single-niche.details', ['plans' => $plans]) --}}
+    @include('pages.single-niche.details', ['plans' => $plans])
     <!-- end details -->
 
     <!-- testimonials -->
