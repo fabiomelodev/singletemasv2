@@ -23,61 +23,73 @@ class PlanSeeder extends Seeder
                 'link' => '#',
                 'items' => json_encode([
                     [
-                        'name' => 'Site Institucional da Igreja',
-                        'description' => '',
-                    ],
-
-                    [
-                        'name' => 'Agenda de Cultos e Eventos',
-                        'description' => '',
-                    ],
-
-                    [
                         'name' => 'Página de Pedidos de Oração',
                         'description' => '',
                     ],
 
                     [
-                        'name' => 'Integração com YouTube (Cultos)',
+                        'name' => 'Serviço de Hospedagem',
                         'description' => '',
                     ],
 
                     [
-                        'name' => 'Mapa e Horários',
+                        'name' => 'Domínio Único',
+                        'description' => '(nomedosite.com.br)',
+                    ],
+
+                    [
+                        'name' => 'Suporte por E-mail',
                         'description' => '',
                     ],
 
                     [
-                        'name' => 'Design Responsivo (Mobile)',
-                        'description' => '',
-                    ],
-
-                    [
-                        'name' => 'Suporte por email',
-                        'description' => '',
-                    ],
-
-                    [
-                        'name' => '1x e-mail profissional',
+                        'name' => '1x E-mail Profissional',
                         'description' => '(contato@nomedosite.com.br)',
                     ]
+
+                    // [
+                    //     'name' => 'Site Modelo Padrão da Igreja',
+                    //     'description' => '',
+                    // ],
+
+                    // [
+                    //     'name' => 'Agenda de Cultos e Eventos',
+                    //     'description' => '',
+                    // ],
+
+                    // [
+                    //     'name' => 'Integração com YouTube (Cultos)',
+                    //     'description' => '',
+                    // ],
+
+                    // [
+                    //     'name' => 'Mapa e Horários',
+                    //     'description' => '',
+                    // ],
+
+                    // [
+                    //     'name' => 'Design Responsivo (Mobile)',
+                    //     'description' => '',
+                    // ],
+
+
                 ]),
                 'resources' => json_encode([
                     [
-                        'name' => 'Site institucional com a identidade da sua igreja',
+                        'name' => 'Página de Pedidos de Oração',
                     ],
 
                     [
-                        'name' => 'Divulgação de horários de cultos e escola bíblica',
+                        'name' => 'Hospedagem',
                     ],
 
-                    [
-                        'name' => 'Canal direto para pedidos de oração',
-                    ],
+                    // [
+                    //     'name' => 'Canal direto para pedidos de oração',
+                    // ],
 
-                    [
-                        'name' => 'Mapa de localização integrado',
-                    ]
+                    // [
+                    //     'name' => 'Mapa de localização integrado',
+                    // ]
                 ]),
                 'order' => 1,
                 'niche_id' => 2,
@@ -88,7 +100,7 @@ class PlanSeeder extends Seeder
             [
                 'name' => 'Plano Completo',
                 'excerpt' => 'Ideal para comunidades em crescimento',
-                'description' => 'O Plano Completo fortalece a comunicação com seus membros. Publique devocionais, gerencie dízimos online e mantenha a comunidade engajada durante a semana.',
+                'description' => 'O Plano Completo fortalece a comunicação com seus membros. Publique devocionais e mantenha a comunidade engajada durante a semana.',
                 'observation' => 'Igrejas estabelecidas que desejam interagir mais com os membros e facilitar doações online.',
                 'price' => 'R$ 199,90',
                 'link' => '#',
@@ -104,34 +116,36 @@ class PlanSeeder extends Seeder
                     ],
 
                     [
-                        'name' => 'Blog de Devocionais e Notícias',
-                        'description' => '',
-                    ],
-
-                    [
-                        'name' => 'Galeria de Fotos e Vídeos',
-                        'description' => '',
-                    ],
-
-                    [
                         'name' => 'Inscrição em Eventos/Retiros',
                         'description' => '',
                     ],
 
                     [
-                        'name' => 'Estudos Bíblicos Online',
+                        'name' => 'Suporte Prioritário',
                         'description' => '',
                     ],
 
                     [
-                        'name' => 'Suporte prioritário',
-                        'description' => '',
-                    ],
-
-                    [
-                        'name' => '3x e-mail profissional',
+                        'name' => '3x E-mail Profissional',
                         'description' => '(contato@nomedosite.com.br)',
                     ]
+
+                    // [
+                    //     'name' => 'Galeria de Fotos e Vídeos',
+                    //     'description' => '',
+                    // ],
+
+                    // [
+                    //     'name' => 'Blog de Devocionais e Notícias',
+                    //     'description' => '',
+                    // ],
+
+                    // [
+                    //     'name' => 'Estudos Bíblicos Online',
+                    //     'description' => '',
+                    // ],
+
+
                 ]),
                 'resources' => json_encode([
                     [
@@ -160,7 +174,7 @@ class PlanSeeder extends Seeder
             [
                 'name' => 'Plano Premium',
                 'excerpt' => 'Gestão completa para grandes ministérios',
-                'description' => 'A solução definitiva para grandes ministérios. Tenha controle total sobre gestão de membros, células, voluntários e loja, além de um App exclusivo.',
+                'description' => 'A solução definitiva para grandes ministérios. Tenha controle total sobre gestão de membros, células e voluntários',
                 'observation' => 'Grandes igrejas, catedrais e ministérios com múltiplas atividades que necessitam de gestão complexa.',
                 'price' => 'R$ 299,90',
                 'link' => '#',
@@ -191,12 +205,12 @@ class PlanSeeder extends Seeder
                     ],
 
                     [
-                        'name' => 'Suporte 24/7 dedicado',
+                        'name' => 'Suporte 24/7 Dedicado',
                         'description' => '',
                     ],
 
                     [
-                        'name' => '5x e-mails profissional',
+                        'name' => '5x E-mails Profissional',
                         'description' => '(contato@nomedosite.com.br)',
                     ]
                 ]),

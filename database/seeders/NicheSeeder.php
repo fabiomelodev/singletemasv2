@@ -22,22 +22,6 @@ class NicheSeeder extends Seeder
                 'minimum_price' => 'R$ 99,90',
                 'plan_details' => json_encode([
                     [
-                        'name' => 'Site Institucional do seu negócio'
-                    ],
-
-                    [
-                        'name' => 'Integração com redes sociais e mapa'
-                    ],
-
-                    [
-                        'name' => 'Botão Whatsapp (CTA)'
-                    ],
-
-                    [
-                        'name' => 'Design Responsivo (Mobile)'
-                    ],
-
-                    [
                         'name' => 'Suporte'
                     ],
 
@@ -66,27 +50,7 @@ class NicheSeeder extends Seeder
                 'minimum_price' => 'R$ 99,90',
                 'plan_details' => json_encode([
                     [
-                        'name' => 'Site Institucional da Igreja'
-                    ],
-
-                    [
-                        'name' => 'Agenda de Cultos e Eventos'
-                    ],
-
-                    [
-                        'name' => 'Página de Pedidos de Oração'
-                    ],
-
-                    [
-                        'name' => 'Integração com YouTube (Cultos)'
-                    ],
-
-                    [
-                        'name' => 'Mapa e Horários'
-                    ],
-
-                    [
-                        'name' => 'Design Responsivo (Mobile)'
+                        'name' => 'Módulos do sistema de gestão'
                     ],
 
                     [
