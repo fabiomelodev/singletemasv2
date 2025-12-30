@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+}
+
+@layer components {
+    .section-title {
+        @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-4;
+    }
+
+    .section-description {
+        @apply max-w-2xl text-lg text-center text-gray-400 mx-auto;
+    }
+
+    .case-item {
+        @apply shadow-lg rounded-lg block bg-white mt-10 p-6;
+    }
+
+    .case-item-thumbnail {
+        @apply bg-red-500;
+    }
+
+    .plans {
+        @apply py-20 px-4 sm:px-6 lg:px-8;
+    }
+
+    .plans-wrapper {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+    }
+
+    .plan-item {
+        @apply transition duration-500 hover:-translate-y-2 shadow-2xl shadow-purple-500/20 border rounded-2xl relative bg-slate-900/50 backdrop-blur-sm p-8;
+    }
+
+    .plan-item:nth-of-type(1) {
+        @apply border-blue-500/30;
+    }
+
+    .plan-item:nth-of-type(2) {
+        @apply border-purple-500/50 ring-purple-500 ring-2;
+    }
+
+    .plan-item:nth-of-type(3) {
+        @apply border-yellow-500/30;
+    }
+
+    .plan-item-flag {
+        @apply -top-4 left-1/2 -translate-x-1/2 rounded-full absolute hidden bg-gradient-to-r from-purple-600 to-pink-600 py-1 px-4;
+    }
+
+    .plan-item:nth-of-type(2) .plan-item-flag {
+        @apply block;
+    }
+
+    .plan-item-flag-title {
+        @apply text-sm font-semibold text-white;
+    }
+
+    .plan-item-title-wrapper {
+        @apply flex items-center gap-3 mb-4;
+    }
+
+    .plan-item-icon-wrapper {
+        @apply rounded-xl bg-slate-800/50 p-3;
+    }
+
+    .plan-item:nth-of-type(1) .plan-item-icon-wrapper {
+        @apply text-blue-400;
+    }
+
+    .plan-item:nth-of-type(2) .plan-item-icon-wrapper {
+        @apply text-purple-400;
+    }
+
+    .plan-item:nth-of-type(3) .plan-item-icon-wrapper {
+        @apply text-yellow-400;
+    }
+
+    .plan-item-icon {
+        @apply w-6 h-6 hidden;
+    }
+
+    .plan-item:nth-of-type(1) .plan-item-icon:nth-of-type(1),
+    .plan-item:nth-of-type(2) .plan-item-icon:nth-of-type(2),
+    .plan-item:nth-of-type(3) .plan-item-icon:nth-of-type(3) {
+        @apply block;
+    }
+
+    .plan-item-title {
+        @apply text-2xl font-bold text-white;
+    }
+
+    .plan-item-description {
+        @apply text-gray-400 mb-6;
+    }
+
+    .plan-item-price {
+        @apply text-4xl font-bold text-white;
+    }
+
+    .plan-item-price-hint {
+        @apply block font-bold text-white;
+    }
+
+    .plan-item-price-monthly {
+        @apply text-gray-400 ml-2;
+    }
+
+    .plan-item-cta {
+        @apply w-full h-10 transition-all duration-300 border border-gray-700 hover:border-purple-500 inline-flex items-center justify-center rounded-md text-sm font-medium text-white hover:bg-purple-500/10 mb-8 py-2 px-4;
+    }
+
+    .plan-item:nth-of-type(2) .plan-item-cta {
+        @apply border-0 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700;
+    }
+
+    .plan-item-list-item {
+        @apply flex items-start gap-3;
+    }
+
+    .plan-item-list-item-title {
+        @apply text-sm text-gray-300;
+    }
+
+    .resources {
+        @apply py-20 px-4 sm:px-6 lg:px-8 bg-slate-950/50;
+    }
+
+    .plan-detail-item {
+        @apply bg-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300;
+    }
+
+    .plan-detail-item:nth-of-type(1) {
+        @apply border-blue-500/30;
+    }
+
+    .plan-detail-item:nth-of-type(2) {
+        @apply border-purple-500/30;
+    }
+
+    .plan-detail-item:nth-of-type(3) {
+        @apply border-yellow-500/30;
+    }
+
+    .plan-detail-item-icon-wrapper {
+        @apply p-4 rounded-xl flex-shrink-0;
+    }
+
+    .plan-detail-item:nth-of-type(1) .plan-detail-item-icon-wrapper {
+        @apply text-blue-400 bg-blue-500/10;
+    }
+
+    .plan-detail-item:nth-of-type(2) .plan-detail-item-icon-wrapper {
+        @apply text-purple-400 bg-purple-500/10;
+    }
+
+    .plan-detail-item:nth-of-type(3) .plan-detail-item-icon-wrapper {
+        @apply text-yellow-400 bg-yellow-500/10;
+    }
+
+    .plan-detail-item-icon {
+        @apply w-8 h-8 hidden;
+    }
+
+    .plan-detail-item:nth-of-type(1) .plan-detail-item-icon:nth-of-type(1),
+    .plan-detail-item:nth-of-type(2) .plan-detail-item-icon:nth-of-type(2),
+    .plan-detail-item:nth-of-type(3) .plan-detail-item-icon:nth-of-type(3) {
+        @apply block;
+    }
+
+    .plan-detail-item-title {
+        @apply text-2xl font-bold text-blue-400 mb-3;
+    }
+
+    .plan-detail-item:nth-of-type(1) .plan-detail-item-title {
+        @apply text-blue-400;
+    }
+
+    .plan-detail-item:nth-of-type(2) .plan-detail-item-title {
+        @apply text-purple-400;
+    }
+
+    .plan-detail-item:nth-of-type(3) .plan-detail-item-title {
+        @apply text-yellow-400;
+    }
+
+    .plan-detail-item-description {
+        @apply leading-relaxed text-gray-300 mb-4;
+    }
+
+    .plan-detail-item-list-item-pointer {
+        @apply mt-1;
+    }
+
+    .plan-detail-item:nth-of-type(1) .plan-detail-item-list-item-pointer {
+        @apply text-blue-400;
+    }
+
+    .plan-detail-item:nth-of-type(2) .plan-detail-item-list-item-pointer {
+        @apply text-purple-400;
+    }
+
+    .plan-detail-item:nth-of-type(3) .plan-detail-item-list-item-pointer {
+        @apply text-yellow-400;
+    }
+
+    .testimonials {
+        @apply bg-slate-950/50 py-20 px-4 sm:px-6 lg:px-8;
+    }
+
+    .testimonial-item {
+        @apply transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 border border-purple-500/20 rounded-2xl backdrop-blur-sm bg-slate-900/50 p-6;
+    }
+
+    .testimonial-item-title {
+        @apply font-semibold text-white;
+    }
+
+    .testimonial-item-office {
+        @apply text-sm text-gray-400;
+    }
+
+    .testimonial-item-description {
+        @apply leading-relaxed text-gray-300 pl-6;
+    }
+
+    .testimonial-item-plan {
+        @apply text-sm font-semibold text-purple-400;
+    }
+
+    .faq {
+        @apply py-20 px-4 sm:px-6 lg:px-8;
+    }
+
+}
