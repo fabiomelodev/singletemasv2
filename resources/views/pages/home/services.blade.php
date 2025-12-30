@@ -4,7 +4,7 @@
 
         <div class="mb-16">
             <h2 class="section-title">
-                Nossos serviços
+                Nossos Serviços
             </h2>
 
             <p class="section-description">

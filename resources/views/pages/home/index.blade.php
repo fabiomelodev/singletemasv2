@@ -84,7 +84,7 @@
     </nav>
 
     <!-- hero -->
-    <x-hero tag="Soluções digitais" titleFirst="Leve seu negócio para o" titleSecond="mundo digital"
+    <x-hero tag="Soluções digitais" titleFirst="Leve seu Negócio Para o" titleSecond="Mundo Digital"
         description="A Single Temas oferece tudo que sua congregação precisa: site moderno, gestão de membros, agenda de eventos e pedidos de oração. Conecte-se com seus fiéis onde eles estiverem."
         buttonText="Conhecer os planos" buttonLink="#" />
     <!-- end hero -->

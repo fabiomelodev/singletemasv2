@@ -4,7 +4,7 @@
 
         <div class="mb-16">
             <h2 class="section-title">
-                Nossos planos mensais
+                Planos Mensais Contínuos
             </h2>
 
             <p class="section-description">
@@ -18,6 +18,5 @@
                 <x-card-niche-item :niche="$niche" />
             @endforeach
         </div>
-
     </div>
 </section>

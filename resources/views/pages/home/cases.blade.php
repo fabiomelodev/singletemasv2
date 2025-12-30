@@ -12,7 +12,7 @@
 
         <div class="mb-16">
             <h2 class="section-title">
-                Nossos cases
+                Nossos Cases
             </h2>
 
             <p class="section-description">
