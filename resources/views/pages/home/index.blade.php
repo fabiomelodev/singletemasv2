@@ -2,7 +2,7 @@
     <x-menu :menu="$menu" />
 
     <!-- hero -->
-    <x-hero tag="Soluções digitais" titleFirst="Leve seu Negócio Para o" titleSecond="Mundo Digital"
+    <x-hero tag="Soluções digitais" titleFirst="Transforme sua Presença Online" titleSecond="com um Site Personalizado"
         description="A Single Temas oferece tudo que o seu negócio precisa: site moderno, gestão de membros, agenda de eventos e pedidos de oração. Conecte-se no digital para continuar crescendo."
         buttonText="Conhecer os planos" buttonLink="#" />
     <!-- end hero -->
@@ -18,7 +18,7 @@
     <!-- how works -->
     @include('pages.home.how-works')
     <!-- end how works -->
-    
+
     <!-- develop website -->
     @include('pages.home.develop-website')
     <!-- end develop website -->

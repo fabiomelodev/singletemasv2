@@ -8,7 +8,7 @@
             </h2>
 
             <p class="section-description">
-                Conheça os nossos melhores planos para você
+                Após o desenvolvimento do seu site, o plano mensal garante sua continuidade e cuidados técnicos.
             </p>
         </div>
 

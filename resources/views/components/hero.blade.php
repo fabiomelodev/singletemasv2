@@ -42,7 +42,7 @@
             </span>
         </h1>
 
-        <p class="max-w-3xl text-lg sm:text-xl text-center text-gray-300 mx-auto mb-12">A
+        <p class="max-w-3xl text-lg sm:text-xl text-center text-gray-300 mx-auto mb-12">
             {{  $description }}
         </p>
 

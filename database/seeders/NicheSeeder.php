@@ -22,19 +22,23 @@ class NicheSeeder extends Seeder
                 'minimum_price' => 'R$ 99,90',
                 'plan_details' => json_encode([
                     [
-                        'name' => 'Suporte'
+                        'name' => 'Zero preocupação técnica'
                     ],
 
                     [
-                        'name' => 'Manutenção corretiva e preventiva'
+                        'name' => 'Site sempre seguro e atualizado'
                     ],
 
                     [
-                        'name' => 'Hospedagem e domínio'
+                        'name' => 'Suporte e ajustes contínuos'
                     ],
 
                     [
-                        'name' => 'E-mail profissional (contato@nomedosite.com.br)'
+                        'name' => 'Economia de tempo e custo'
+                    ],
+
+                    [
+                        'name' => 'Evolução constante do site'
                     ]
                 ]),
                 'status' => 1,
@@ -50,15 +54,15 @@ class NicheSeeder extends Seeder
                 'minimum_price' => 'R$ 99,90',
                 'plan_details' => json_encode([
                     [
-                        'name' => 'Módulos do sistema de gestão'
+                        'name' => 'Foco no ministério enquanto cuidamos do site'
                     ],
 
                     [
-                        'name' => 'Suporte'
+                        'name' => 'Comunicação clara com membros e visitantes'
                     ],
 
                     [
-                        'name' => 'Manutenção corretiva e preventiva'
+                        'name' => 'Estabilidade para transmissões, eventos e conteúdos'
                     ],
 
                     [
