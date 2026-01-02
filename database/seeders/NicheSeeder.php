@@ -63,14 +63,6 @@ class NicheSeeder extends Seeder
 
                     [
                         'name' => 'Estabilidade para transmissões, eventos e conteúdos'
-                    ],
-
-                    [
-                        'name' => 'Hospedagem e domínio'
-                    ],
-
-                    [
-                        'name' => 'E-mail profissional (contato@nomedosite.com.br)'
                     ]
                 ]),
                 'status' => 1,
