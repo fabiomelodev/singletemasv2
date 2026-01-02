@@ -17,7 +17,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Desenvolvimento de site',
                 'slug' => 'desenvolvimento-de-site',
-                'description' => 'Criamos sites modernos, rápidos e totalmente personalizados para sua necessidade. Trabalhamos com programação e WordPress, sempre utilizando plugins atualizados para garantir desempenho, segurança e estabilidade. Todos os projetos são responsivos (adaptados para celular, tablet e computador), dinâmicos e preparados para oferecer a melhor experiência ao usuário.',
+                'description' => 'Criamos sites personalizados, modernos e responsivos, com foco em performance, segurança e boa experiência para seus visitantes.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -26,7 +26,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Desenvolvimento de sistemas',
                 'slug' => 'desenvolvimento-de-sistemas',
-                'description' => 'Desenvolvemos sistemas sob medida utilizando Laravel, um dos frameworks mais robustos e seguros do mercado. Através dele, entregamos soluções escaláveis, práticas e que atendem processos específicos de cada cliente, como sistemas de gestão, controle interno ou ferramentas exclusivas.',
+                'description' => 'Soluções exclusivas e sob medida (painéis, sistemas internos e integrações) com tecnologia escalável e eficiente.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -35,7 +35,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Manutenção',
                 'slug' => 'manutencao',
-                'description' => 'Se o seu site apresenta algum problema, lentidão ou precisa de atualizações, oferecemos um serviço completo de manutenção corretiva e preventiva. Cuidamos desde pequenos ajustes até melhorias mais complexas, sempre visando manter o site estável, atualizado e seguro.',
+                'description' => 'Ajustes, melhorias e correções para manter seu site sempre atualizado, estável e seguro.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -44,7 +44,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Suporte técnico',
                 'slug' => 'suporte-tecnico',
-                'description' => 'Disponibilizamos suporte dedicado 8x5 (de segunda a sexta-feira em horário comercial), com atendimento direto pelo WhatsApp. Isso garante agilidade na comunicação, rápida solução de problemas e acompanhamento próximo das necessidades do seu projeto.',
+                'description' => 'Atendimento direto por WhatsApp em horário comercial para resolver dúvidas e problemas com agilidade.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -53,7 +53,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Hospedagem',
                 'slug' => 'hospedagem',
-                'description' => 'Hospedagem rápida, segura e estável para manter seu site sempre online, com backups e monitoramento contínuo.',
+                'description' => 'Serviço de hospedagem dedicado para manter seu site sempre online com velocidade e segurança.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -62,7 +62,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Domínio',
                 'slug' => 'dominio',
-                'description' => 'Cuidamos do registro e renovação do domínio para que seu site continue acessível sem preocupações técnicas.',
+                'description' => 'Registro e configuração do seu endereço na internet (ex: nomedaigreja.com.br) sem complicação.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -71,7 +71,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'SEO',
                 'slug' => 'seo',
-                'description' => 'Aplicamos boas práticas de SEO para que seu site seja bem estruturado, rápido e preparado para ser encontrado no Google. O trabalho inclui otimização técnica, organização do conteúdo e performance, criando uma base sólida para crescimento orgânico ao longo do tempo.',
+                'description' => 'Estruturamos seu site para melhorar a visibilidade nos buscadores, com boas práticas de otimização técnica e performance.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -80,7 +80,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Consultoria',
                 'slug' => 'consultoria',
-                'description' => 'Orientação técnica e estratégica para melhorar o site, organizar conteúdos e apoiar decisões digitais com clareza.',
+                'description' => 'Orientação estratégica para decisões sobre presença digital, conteúdo e crescimento online.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()

@@ -19,42 +19,42 @@
                 $items = [
                     [
                         'name' => 'Escolha do domínio',
-                        'description' => 'Definimos o domínio ideal para o site, alinhado ao nome da igreja ou empresa, garantindo uma presença online profissional.'
+                        'description' => 'Você escolhe o endereço do seu site e cuidamos de todo o registro e configuração.'
                     ],
 
                     [
                         'name' => 'Envio do briefing',
-                        'description' => 'Coletamos as informações essenciais para entender a identidade, objetivos e necessidades do projeto.'
+                        'description' => 'Nos envia informações essenciais para entendermos sua necessidade.'
                     ],
 
                     [
-                        'name' => 'Criação do layout',
-                        'description' => 'Desenvolvemos o layout inicial do site, pensado de forma personalizada e alinhado à identidade visual do cliente.'
+                        'name' => 'Proposta de layout',
+                        'description' => 'Criamos um visual exclusivo para você revisar e aprovar.'
                     ],
 
                     [
                         'name' => 'Desenvolvimento do site',
-                        'description' => 'Transformamos o layout aprovado em um site funcional, responsivo, rápido e bem estruturado.'
+                        'description' => 'Transformamos o layout aprovado em um site funcional.'
                     ],
 
                     [
-                        'name' => 'Versão para aprovação',
-                        'description' => 'Disponibilizamos o site em um ambiente de testes para validação e ajustes finais antes da publicação.'
+                        'name' => 'Versão de aprovação',
+                        'description' => 'Você revisa e confirma o site antes de publicarmos.'
                     ],
 
                     [
-                        'name' => 'Plano mensal de continuidade',
-                        'description' => 'Após o desenvolvimento, é escolhido o plano mensal que garante manutenção, suporte, ajustes, hospedagem, domínio, e-mails e acesso aos módulos do sistema.'
+                        'name' => 'Assinatura do plano mensal',
+                        'description' => 'Escolha o plano que garante manutenção, suporte e continuidade ao seu site.'
                     ],
 
                     [
-                        'name' => 'Publicação do site',
-                        'description' => 'Configuramos o ambiente final e colocamos o site no ar, pronto para acesso do público.'
+                        'name' => 'Publicação online',
+                        'description' => 'Configuramos tudo para seu site ficar no ar.'
                     ],
 
                     [
                         'name' => 'Entrega de acessos',
-                        'description' => 'Entregamos os acessos administrativos e orientações básicas para uso do site.'
+                        'description' => 'Enviamos os dados para você acessar e administrar o site.'
                     ],
                 ];
             @endphp
