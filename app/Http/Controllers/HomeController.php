@@ -8,7 +8,6 @@ use App\Models\Niche;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Testimonial;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {

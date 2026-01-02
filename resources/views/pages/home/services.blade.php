@@ -46,7 +46,7 @@
         </div>
 
         <div class="flex justify-center mt-12">
-            <x-button-cta />
+            <x-button-cta url="https://wa.me/5511998043538?text=Quero meu site. Quero falar com um especialista?" />
         </div>
     </div>
 </section>

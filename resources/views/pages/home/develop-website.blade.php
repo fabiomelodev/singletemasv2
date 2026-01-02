@@ -100,7 +100,8 @@
                         </ul>
 
                         <div class="flex mt-12">
-                            <x-button-cta />
+                            <x-button-cta
+                                url="https://wa.me/5511998043538?text=Quero meu site personalizado. Como posso prosseguir?" />
                         </div>
                     </div>
                 </div>

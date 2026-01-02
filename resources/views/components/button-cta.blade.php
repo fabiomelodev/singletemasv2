@@ -1,5 +1,9 @@
+@props([
+    'url' => null
+])
+
 <a class="transition hover:scale-110 border border-purple-500/30 rounded-full flex items-center gap-2 bg-purple-600/20 hover:bg-purple-600/60 backdrop-blur-sm py-2 px-4"
-    href="#">
+    href="{{  $url }}" target="_blank" rel="noreferrer noopener">
 
     <svg class="w-8 h-8 fill-purple-300" xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -8,6 +12,7 @@
     </svg>
 
     <span class=" text-xl text-purple-300">
-        Fale com especialista
+        {{-- Fale com especialista --}}
+        Quero meu site
     </span>
 </a>
