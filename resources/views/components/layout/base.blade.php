@@ -1,12 +1,12 @@
 <html>
 
 <head>
-    <title>Site</title>
+    <title>Single Temas | Desenvolvimento de site e sistemas</title>
     @vite('resources/js/app.js')
 </head>
 
-<body>
-    <main class="bg-gradient-to-br from-slate-950 min-h-screen to-slate-900 via-purple-950">
+<body class="bg-gradient-to-br from-slate-950 min-h-screen to-slate-900 via-purple-950">
+    <main>
         {{ $slot }}
     </main>
 

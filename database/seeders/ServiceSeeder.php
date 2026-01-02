@@ -53,7 +53,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Hospedagem',
                 'slug' => 'hospedagem',
-                'description' => 'Oferecemos a nossa hospedagem sem se preocupar em contratar o seu próprio e configurar.',
+                'description' => 'Hospedagem rápida, segura e estável para manter seu site sempre online, com backups e monitoramento contínuo.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -62,7 +62,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Domínio',
                 'slug' => 'dominio',
-                'description' => 'Domínio é o link que os membros irão acessar o site como de exemplo (https://nomedaigreja.com.br).',
+                'description' => 'Cuidamos do registro e renovação do domínio para que seu site continue acessível sem preocupações técnicas.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -71,7 +71,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'SEO',
                 'slug' => 'seo',
-                'description' => '',
+                'description' => 'Aplicamos boas práticas de SEO para que seu site seja bem estruturado, rápido e preparado para ser encontrado no Google. O trabalho inclui otimização técnica, organização do conteúdo e performance, criando uma base sólida para crescimento orgânico ao longo do tempo.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -80,7 +80,7 @@ class ServiceSeeder extends Seeder
             [
                 'name' => 'Consultoria',
                 'slug' => 'consultoria',
-                'description' => 'Oferecemos o serviço de consultoria voltado para estratégia no desenvolvimento ou crescimento do seu site.',
+                'description' => 'Orientação técnica e estratégica para melhorar o site, organizar conteúdos e apoiar decisões digitais com clareza.',
                 'status' => 1,
                 'created_at' => now(),
                 'updated_at' => now()

@@ -15,7 +15,8 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->boolean('is_home')->default(false);
+            $table->boolean('status')->default(true);
+            $table->integer('order');
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use App\Models\Menu;
 use App\Models\Niche;
 use App\Models\Plan;
 use Illuminate\Database\Eloquent\Builder;
@@ -39,22 +40,20 @@ class NicheController extends Controller
      */
     public function show(Niche $niche)
     {
+        $menu = Menu::where('slug', 'menu-single-nicho')->first();
+
         $plans = $niche->plans()->get();
 
         $testimonials = $niche->testimonials()->get();
 
-        $faqs = Faq::whereHas('niches', function (Builder $query) use ($niche): Builder {
-            return $query->where('niches.id', $niche->id);
-        })->get();
-
         $resources = $niche->resources()->get();
 
         return view('pages.single-niche.index', [
+            'menu' => $menu,
             'niche' => $niche,
             'plans' => $plans,
             'resources' => $resources,
-            'testimonials' => $testimonials,
-            'faqs' => $faqs
+            'testimonials' => $testimonials
         ]);
     }
 

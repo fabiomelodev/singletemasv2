@@ -1,4 +1,4 @@
-<section class="py-20 px-4 sm:px-6 lg:px-8" id="desenvolvimento">
+<section class="py-20 px-4 sm:px-6 lg:px-8" id="como-funciona">
 
     <div class="max-w-7xl mx-auto">
 
@@ -60,9 +60,8 @@
                         </h3>
 
                         <p class="plan-detail-item-description">
-                            Nesta primeira etapa, realizamos o desenvolvimento do site da sua igreja, de forma
-                            personalizada e
-                            profissional.
+                            Nesta primeira etapa, realizamos o desenvolvimento do site da sua empresa, de forma
+                            personalizada e profissional.
                         </p>
 
                         <div class="mt-6">
@@ -81,7 +80,7 @@
                                 <li class="flex items-start gap-2">
                                     <span class="plan-detail-item-list-item-pointer">•</span>
                                     <span class="text-gray-300">
-                                        Pensar na identidade e necessidades da igreja
+                                        Pensar na identidade e necessidades da sua empresa
                                     </span>
                                 </li>
 
@@ -145,7 +144,7 @@
                                 </svg>
 
                                 <p class="text-sm font-semibold text-blue-400">
-                                    Esse valor corresponde à construção do site, como um ativo digital da igreja.
+                                    Esse valor corresponde à construção do site, como um ativo digital da empresa.
                                 </p>
                             </div>
                         </div>
@@ -193,7 +192,8 @@
                         </h3>
 
                         <p class="plan-detail-item-description">
-                            Após o site pronto, a igreja passa a contar com um plano mensal de continuidade, que garante
+                            Após o site pronto, a sua empresa passa a contar com um plano mensal de continuidade, que
+                            garante
                             que tudo continue funcionando, seguro e atualizado.
                         </p>
 
@@ -294,7 +294,7 @@
                 <div>
                     <div class="leading-relaxed border-t border-slate-800 text-sm text-gray-300 pb-5 px-6 ">
                         <p class="font-semibold pt-4">
-                            Esse modelo traz benefícios importantes para a igreja:
+                            Esse modelo traz benefícios importantes para sua empresa:
                         </p>
 
                         <ul>
@@ -315,7 +315,7 @@
                             <li class="flex items-start gap-2">
                                 <span class="plan-detail-item-list-item-pointer">•</span>
                                 <span class="text-gray-300">
-                                    A igreja não precisa se preocupar com parte técnica
+                                    A sua empresa não precisa se preocupar com parte técnica
                                 </span>
                             </li>
 
@@ -405,117 +405,12 @@
                 <div>
                     <div class="text-gray-300 leading-relaxed border-t border-slate-800 text-sm pb-5 px-6">
                         <p class="pt-4">
-                            Mais do que criar um site, nosso objetivo é ser um parceiro digital da sua igreja, cuidando
-                            da presença online para que vocês possam focar no mais importante: o ministério.
+                            Mais do que criar um site, nosso objetivo é ser um parceiro digital da sua empresa, cuidando
+                            da presença online para que vocês possam focar no mais importante: no seu negócio.
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-x-6 mt-10">
-            @php
-                $cards = [
-                    [
-                        'phrase' => 'Obtenha o seu site a partir',
-                        'price' => 'R$ 590,90',
-                        'models' => [
-                            'Institucional',
-                            'Landing Page',
-                            'Portal',
-                            'Blog',
-                        ],
-                        'resources' => [
-                            'Layout único',
-                            'Painel de controle',
-                            'Imagens e textos editáveis',
-                            'Responsivo',
-                            'SEO',
-                            'Formulário para contato',
-                            'Formulário para membros',
-                            'Integrações com Whatsapp e mapa',
-                            'Pedido de oração',
-                            'Garantia com manutenção e suporte por 3 meses'
-                        ],
-                        'link' => '#'
-                    ],
-
-                    [
-                        'phrase' => 'Adquira um site modelo padrão',
-                        'price' => 'R$ 99,90',
-                        'models' => [
-                            'Landing Page',
-                        ],
-                        'resources' => [
-                            'Painel de controle',
-                            'Imagens e textos editáveis',
-                            'Responsivo',
-                            'SEO',
-                            'Formulário para contato',
-                            'Integrações com Whatsapp e mapa',
-                            'Garantia com manutenção e suporte por 3 meses'
-                        ],
-                        'link' => '#'
-                    ],
-                ];
-            @endphp
-
-            @foreach($cards as $card)
-                <div
-                    class="border border-purple-500/20 rounded-2xl overflow-hidden flex flex-col gap-y-6 bg-slate-900/50 backdrop-blur-sm p-10">
-
-                    <div class="pt-6">
-
-                        <h3 class="text-xl font-semibold text-white">
-                            {{  $card['phrase'] }}
-
-                            <span class="block text-7xl font-black text-white">
-                                {{  $card['price'] }}
-                            </span>
-                        </h3>
-
-                        <div class="mt-6">
-                            <p class="font-medium text-white">
-                                Modelos de sites:
-                            </p>
-                        </div>
-
-                        <div class="flex flex-wrap gap-4 mt-2">
-
-                            @foreach($card['models'] as $model)
-                                <div
-                                    class="transition hover:scale-110 border border-purple-500/30 rounded-full inline-flex items-center gap-2 bg-purple-600/20 hover:bg-purple-600/60 backdrop-blur-sm py-2 px-4">
-
-                                    <span class="text-sm text-purple-300">
-                                        {{  $model }}
-                                    </span>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-
-                    <div class="mt-6">
-                        <p class="text-sm font-semibold text-gray-400 mb-3">
-                            Principais Recursos:
-                        </p>
-
-                        <ul class="space-y-2">
-                            @foreach($card['resources'] as $resource)
-                                <li class="flex items-start gap-2">
-                                    <span class="plan-detail-item-list-item-pointer text-purple-400">•</span>
-                                    <span class="text-gray-300">
-                                        {{  $resource }}
-                                    </span>
-                                </li>
-                            @endforeach
-                        </ul>
-
-                        <div class="flex mt-12">
-                            <x-button-cta />
-                        </div>
-                    </div>
-                </div>
-            @endforeach
         </div>
     </div>
 </section>

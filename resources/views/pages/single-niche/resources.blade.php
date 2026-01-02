@@ -1,4 +1,4 @@
-<section class="resources" id="comparacao">
+<section class="resources" id="recursos">
 
     <div class="container mx-auto px-4">
 

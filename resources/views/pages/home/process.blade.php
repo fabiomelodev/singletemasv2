@@ -8,7 +8,8 @@
             </h2>
 
             <p class="section-description">
-                Tenha o seu site conosco com layout único e personalizado
+                Trabalhamos com um processo simples, organizado e transparente para garantir qualidade, prazo e clareza
+                em cada etapa
             </p>
         </div>
 
@@ -18,37 +19,42 @@
                 $items = [
                     [
                         'name' => 'Escolha do domínio',
-                        'description' => 'Você escolhe o endereço do seu site (domínio) e nós verificamos a disponibilidade e realizamos a configuração.'
+                        'description' => 'Definimos o domínio ideal para o site, alinhado ao nome da igreja ou empresa, garantindo uma presença online profissional.'
                     ],
 
                     [
-                        'name' => 'Desenvolvimento de site',
-                        'description' => 'Desenvolveremos o seu site de acordo com requisitos.'
+                        'name' => 'Envio do briefing',
+                        'description' => 'Coletamos as informações essenciais para entender a identidade, objetivos e necessidades do projeto.'
+                    ],
+
+                    [
+                        'name' => 'Criação do layout',
+                        'description' => 'Desenvolvemos o layout inicial do site, pensado de forma personalizada e alinhado à identidade visual do cliente.'
+                    ],
+
+                    [
+                        'name' => 'Desenvolvimento do site',
+                        'description' => 'Transformamos o layout aprovado em um site funcional, responsivo, rápido e bem estruturado.'
                     ],
 
                     [
                         'name' => 'Versão para aprovação',
-                        'description' => 'Iremos disponibilizar uma versão do site para ser aprovado.'
+                        'description' => 'Disponibilizamos o site em um ambiente de testes para validação e ajustes finais antes da publicação.'
                     ],
 
                     [
-                        'name' => 'Configuração de ambiente',
-                        'description' => 'Configuremos 100% ambiente para acessar o seu site.'
+                        'name' => 'Plano mensal de continuidade',
+                        'description' => 'Após o desenvolvimento, é escolhido o plano mensal que garante manutenção, suporte, ajustes, hospedagem, domínio, e-mails e acesso aos módulos do sistema.'
                     ],
 
                     [
-                        'name' => 'Assinatura do plano',
-                        'description' => 'Selecione o plano ideal para a sua igreja, de acordo com a necessidade de páginas, recursos e integrações.'
+                        'name' => 'Publicação do site',
+                        'description' => 'Configuramos o ambiente final e colocamos o site no ar, pronto para acesso do público.'
                     ],
 
                     [
-                        'name' => 'Configurações iniciais',
-                        'description' => 'Após a confirmação da assinatura, iniciamos a preparação do ambiente e o desenvolvimento do site. O prazo é de até 5 dias úteis para deixar tudo pronto.'
-                    ],
-
-                    [
-                        'name' => 'Entrega de acesso',
-                        'description' => 'Assim que o site estiver finalizado, você receberá por e-mail todas as credenciais de acesso ao painel administrativo.'
+                        'name' => 'Entrega de acessos',
+                        'description' => 'Entregamos os acessos administrativos e orientações básicas para uso do site.'
                     ],
                 ];
             @endphp

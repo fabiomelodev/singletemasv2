@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="flex justify-between items-center mt-4">
-                        <h6 class="text-lg font-bold text-purple-800">
+                        <h6 class="text-lg font-bold text-white/80">
                             {{  $project->name }}
                         </h6>
 

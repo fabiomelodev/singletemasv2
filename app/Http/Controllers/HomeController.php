@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use App\Models\Menu;
 use App\Models\Niche;
 use App\Models\Project;
 use App\Models\Service;
@@ -13,22 +14,22 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $menu = Menu::where('slug', 'menu-pagina-home')->first();
+
         $services = Service::active()->get();
 
         $projects = Project::active()->get();
 
         $niches = Niche::active()->get();
 
-        $testimonials = Testimonial::all();
-
-        $faqs = Faq::where('is_home', 1)->get();
+        $testimonials = Testimonial::inRandomOrder()->get();
 
         return view('pages.home.index', [
+            'menu' => $menu,
             'services' => $services,
             'projects' => $projects,
             'niches' => $niches,
-            'testimonials' => $testimonials,
-            'faqs' => $faqs
+            'testimonials' => $testimonials
         ]);
     }
 }
