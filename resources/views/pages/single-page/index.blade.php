@@ -4,17 +4,17 @@
     <!-- content -->
     <section class="py-20">
 
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto px-4">
 
             <div class="shadow rounded-2xl bg-white p-6">
 
                 <span>
-                    <h1 class="text-3xl font-bold capitalize text-center text-gray-800">
+                    <h1 class="text-2xl lg:text-3xl font-bold capitalize text-center text-gray-800">
                         {{ $page->name }}
                     </h1>
                 </span>
 
-                <span class="page-content block mt-20">
+                <span class="page-content block mt-10 lg:mt-20">
                     {!! $page->content !!}
                 </span>
 
