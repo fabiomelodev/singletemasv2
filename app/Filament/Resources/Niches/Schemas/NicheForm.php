@@ -17,6 +17,32 @@ class NicheForm
         return $schema
             ->columns(12)
             ->components([
+                Section::make('Banner')
+                    ->columnSpan(9)
+                    ->schema([
+                        TextInput::make('banner_tag')
+                            ->label('Tag')
+                            ->required(),
+                        TextInput::make('banner_title_first')
+                            ->label('Primeiro título')
+                            ->required(),
+                        TextInput::make('banner_title_second')
+                            ->label('Segundo título')
+                            ->required(),
+                        RichEditor::make('banner_description')
+                            ->label('Descrição')
+                            ->required()
+                    ]),
+                Section::make()
+                    ->columnSpan(3)
+                    ->schema([
+                        DatePicker::make('created_at')
+                            ->label('Criado em')
+                            ->disabled()
+                            ->hiddenOn('create'),
+                        Toggle::make('status')
+                            ->required(),
+                    ]),
                 Section::make()
                     ->columnSpan(9)
                     ->schema([
@@ -43,16 +69,7 @@ class NicheForm
                                     ->required(),
                             ])
                     ]),
-                Section::make()
-                    ->columnSpan(3)
-                    ->schema([
-                        DatePicker::make('created_at')
-                            ->label('Criado em')
-                            ->disabled()
-                            ->hiddenOn('create'),
-                        Toggle::make('status')
-                            ->required(),
-                    ])
+
             ]);
     }
 }

@@ -42,9 +42,9 @@
             </span>
         </h1>
 
-        <p class="max-w-3xl text-lg sm:text-xl text-center text-gray-300 mx-auto mb-12">
-            {{  $description }}
-        </p>
+        <span class="max-w-3xl block text-lg sm:text-xl text-center text-gray-300 mx-auto mb-12">
+            {!!  $description !!}
+        </span>
 
         <div class="flex justify-center">
             <a class="transition hover:scale-110 border border-purple-500/30 rounded-full inline-flex items-center gap-2 bg-purple-600/20 hover:bg-purple-600/60 backdrop-blur-sm py-2 px-4"
