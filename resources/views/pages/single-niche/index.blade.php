@@ -8,15 +8,15 @@
     <!-- end hero -->
 
     <!-- plans -->
-    @include('pages.single-niche.plans', ['plans' => $plans])
+    @include('pages.single-niche.plans', ['niche' => $niche, 'plans' => $plans])
     <!-- end plans -->
 
     <!-- resources -->
-    @include('pages.single-niche.resources', ['resources' => $resources])
+    @include('pages.single-niche.resources', ['niche' => $niche, 'resources' => $resources])
     <!-- end resources -->
 
     <!-- details -->
-    @include('pages.single-niche.details', ['plans' => $plans])
+    @include('pages.single-niche.details', ['niche' => $niche, 'plans' => $plans])
     <!-- end details -->
 
     <!-- testimonials -->

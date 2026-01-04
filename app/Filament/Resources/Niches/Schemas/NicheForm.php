@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Niches\Schemas;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
@@ -17,6 +18,10 @@ class NicheForm
         return $schema
             ->columns(12)
             ->components([
+                TextInput::make('name')
+                    ->label('Nome')
+                    ->columnSpan(9)
+                    ->required(),
                 Section::make('Banner')
                     ->columnSpan(9)
                     ->schema([
@@ -43,31 +48,45 @@ class NicheForm
                         Toggle::make('status')
                             ->required(),
                     ]),
-                Section::make()
+                Section::make('Sobre os planos')
                     ->columnSpan(9)
                     ->schema([
-                        TextInput::make('name')
+                        TextInput::make('section_plans_title')
+                            ->label('Título da seção'),
+                        Textarea::make('section_plans_description')
+                            ->label('Descrição da seção'),
+                        TextInput::make('plan_title')
                             ->label('Nome')
                             ->required(),
-                        Section::make('Sobre o plano')
+                        RichEditor::make('plan_description')
+                            ->label('Descrição')
+                            ->required(),
+                        TextInput::make('minimum_price')
+                            ->label('Valor mínimo')
+                            ->required(),
+                        Repeater::make('plan_details')
+                            ->label('Detalhes')
                             ->schema([
-                                TextInput::make('plan_title')
+                                TextInput::make('name')
                                     ->label('Nome')
-                                    ->required(),
-                                RichEditor::make('plan_description')
-                                    ->label('Descrição')
-                                    ->required(),
-                                TextInput::make('minimum_price')
-                                    ->label('Valor mínimo')
-                                    ->required(),
-                                Repeater::make('plan_details')
-                                    ->label('Detalhes')
-                                    ->schema([
-                                        TextInput::make('name')
-                                            ->label('Nome')
-                                    ])
-                                    ->required(),
                             ])
+                            ->required(),
+                    ]),
+                Section::make('Sobre os recursos')
+                    ->columnSpan(9)
+                    ->schema([
+                        TextInput::make('section_resources_title')
+                            ->label('Título da seção'),
+                        Textarea::make('section_resources_description')
+                            ->label('Descrição da seção')
+                    ]),
+                Section::make('Sobre os detalhes dos planos')
+                    ->columnSpan(9)
+                    ->schema([
+                        TextInput::make('section_plans_details_title')
+                            ->label('Título da seção'),
+                        Textarea::make('section_plans_details_description')
+                            ->label('Descrição da seção')
                     ]),
 
             ]);

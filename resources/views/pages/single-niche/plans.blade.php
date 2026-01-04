@@ -5,12 +5,11 @@
         <div class="mb-16">
 
             <h2 class="section-title">
-                Planos para seu Ministério
+                {{ $niche->section_plans_title }}
             </h2>
 
             <p class="section-description">
-                Ferramentas modernas para evangelização e gestão
-                eclesiástica. Escolha o melhor para sua comunidade.
+                {{ $niche->section_plans_description }}
             </p>
         </div>
 

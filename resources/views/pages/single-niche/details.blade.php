@@ -8,8 +8,7 @@
             </h2>
 
             <p class="section-description">
-                Entenda como cada opção pode abençoar a gestão e
-                comunicação da sua igreja
+                {{ $niche->section_plans_details_description }}
             </p>
         </div>
 

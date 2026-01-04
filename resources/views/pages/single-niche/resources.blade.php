@@ -8,7 +8,7 @@
             </h2>
 
             <p class="section-description">
-                Detalhes do que cada plano oferece para o crescimento da sua igreja
+                {{ $niche->section_resources_description }}
             </p>
         </div>
 
