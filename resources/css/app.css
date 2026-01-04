@@ -214,7 +214,7 @@
     }
 
     .plan-detail-item-description {
-        @apply leading-relaxed text-gray-300 mb-4;
+        @apply leading-relaxed block text-gray-300 mb-4;
     }
 
     .plan-detail-item-list-item-pointer {

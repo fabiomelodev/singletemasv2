@@ -55,9 +55,9 @@
                                 {{  $plan->name }}
                             </h3>
 
-                            <p class="plan-detail-item-description">
-                                {{  $plan->description }}
-                            </p>
+                            <span class="plan-detail-item-description">
+                                {!! $plan->description !!}
+                            </span>
 
                             <div class="bg-slate-800/30 rounded-xl p-4 mb-4">
                                 <p class="text-sm font-semibold text-gray-400 mb-2">
