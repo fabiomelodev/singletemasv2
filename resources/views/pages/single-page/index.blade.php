@@ -1,5 +1,5 @@
 <x-layout.base>
-    {{-- <x-menu :menu="$menu" /> --}}
+    <x-menu :menu="$menu" />
 
     <!-- content -->
     <section class="py-20">
