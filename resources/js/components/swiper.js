@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -61,6 +61,33 @@ new Swiper(".js-swiper-processes", {
         320: {
             slidesPerView: 1.2,
             spaceBetween: 30,
+        },
+
+        768: {
+            slidesPerView: 2.2,
+            spaceBetween: 30,
+        },
+    },
+});
+
+new Swiper(".js-swiper-testimonials", {
+    modules: [Autoplay, Pagination],
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+
+    autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: ".js-swiper-pagination-testimonials",
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
         },
 
         768: {

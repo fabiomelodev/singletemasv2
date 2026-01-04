@@ -36,6 +36,6 @@
     <!-- end niches -->
 
     <!-- testimonials -->
-    {{-- <x-testimonials :testimonials="$testimonials" /> --}}
+    <x-testimonials :testimonials="$testimonials" />
     <!-- end testimonials -->
 </x-layout.base>
