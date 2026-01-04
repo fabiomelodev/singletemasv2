@@ -12,8 +12,25 @@
 }
 
 @layer components {
-    .content ul {
-        @apply list-disc mt-2 pl-4;
+    .content ul,
+    .page-content ul {
+        @apply list-disc mt-2 mb-4 pl-4;
+    }
+
+    .page-content h2 {
+        @apply text-2xl font-bold my-4;
+    }
+
+    .page-content h3 {
+        @apply text-xl font-bold my-4;
+    }
+
+    .page-content p {
+        @apply mb-4;
+    }
+
+    .page-content ul * {
+        @apply mb-0;
     }
 
     .section-title {

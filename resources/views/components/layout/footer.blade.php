@@ -22,33 +22,17 @@
 
                 <div>
                     <h3 class="text-xl font-bold text-white mb-4">
-                        Links Rápidos
+                        Links Úteis
                     </h3>
 
                     <ul class="space-y-2">
-                        <li>
-                            <a href="#planos" class="transition-colors text-gray-400 hover:text-purple-400">
-                                Planos
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#comparacao" class="transition-colors text-gray-400 hover:text-purple-400">
-                                Comparação
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#depoimentos" class="transition-colors text-gray-400 hover:text-purple-400">
-                                Depoimentos
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#faq" class="transition-colors text-gray-400 hover:text-purple-400">
-                                FAQ
-                            </a>
-                        </li>
+                        @foreach($pages as $page)
+                            <li>
+                                <a href="{{ route('page.show', $page ) }}" class="transition-colors text-gray-400 hover:text-purple-400">
+                                    {{ $page->name }}
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
 

@@ -34,16 +34,6 @@ class MenuSeeder extends Seeder
                     ],
 
                     [
-                        'name' => 'Processos',
-                        'link' => '#processos'
-                    ],
-
-                    [
-                        'name' => 'Template',
-                        'link' => '#template'
-                    ],
-
-                    [
                         'name' => 'Planos',
                         'link' => '#planos'
                     ],
