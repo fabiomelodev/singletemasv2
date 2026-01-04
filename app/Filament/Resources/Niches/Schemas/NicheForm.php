@@ -75,16 +75,12 @@ class NicheForm
                 Section::make('Sobre os recursos')
                     ->columnSpan(9)
                     ->schema([
-                        TextInput::make('section_resources_title')
-                            ->label('Título da seção'),
                         Textarea::make('section_resources_description')
                             ->label('Descrição da seção')
                     ]),
                 Section::make('Sobre os detalhes dos planos')
                     ->columnSpan(9)
                     ->schema([
-                        TextInput::make('section_plans_details_title')
-                            ->label('Título da seção'),
                         Textarea::make('section_plans_details_description')
                             ->label('Descrição da seção')
                     ]),
