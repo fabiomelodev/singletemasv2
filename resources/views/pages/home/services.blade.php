@@ -50,7 +50,7 @@
         <!-- mobile -->
         <div class="lg:hidden">
 
-            <div class="swiper js-swiper-processes">
+            <div class="swiper js-swiper-services">
 
                 <div class="swiper-wrapper h-[unset!important]">
 
@@ -91,7 +91,7 @@
             </div>
 
             <div class="relative mt-8">
-                <div class="swiper-pagination js-swiper-pagination-processes"></div>
+                <div class="swiper-pagination js-swiper-pagination-services"></div>
             </div>
         </div>
         <!-- end mobile -->

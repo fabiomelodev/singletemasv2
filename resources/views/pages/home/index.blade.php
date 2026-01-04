@@ -24,7 +24,7 @@
     <!-- end develop website -->
 
     <!-- process -->
-    {{-- @include('pages.home.process') --}}
+    @include('pages.home.process')
     <!-- end process -->
 
     <!-- template -->

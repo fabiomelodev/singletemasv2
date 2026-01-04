@@ -13,9 +13,7 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-4 gap-y-10 gap-x-2">
-
-            @php
+        @php
                 $items = [
                     [
                         'name' => 'Escolha do domínio',
@@ -59,8 +57,11 @@
                 ];
             @endphp
 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-2">
+
             @foreach($items as $key => $item)
                 <div class="flex flex-col items-center">
+
                     <div
                         class="w-14 h-14 hover:shadow-xl hover:shadow-purple-500/10 border border-purple-500/20 rounded-xl flex justify-center items-center bg-slate-800/50 p-3">
                         <p class="font-black text-purple-500">
