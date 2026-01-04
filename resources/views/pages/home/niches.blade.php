@@ -12,7 +12,7 @@
             </p>
         </div>
 
-        <div class="flex justify-center gap-x-6">
+        <div class="flex flex-col md:flex-row justify-center gap-6">
 
             @foreach($niches as $niche)
                 <x-card-niche-item :niche="$niche" />

@@ -32,7 +32,7 @@
     <!-- end template -->
 
     <!-- niches -->
-    {{-- @include('pages.home.niches', ['niches' => $niches]) --}}
+    @include('pages.home.niches', ['niches' => $niches])
     <!-- end niches -->
 
     <!-- testimonials -->
