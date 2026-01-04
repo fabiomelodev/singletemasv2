@@ -28,7 +28,7 @@
     <!-- end process -->
 
     <!-- template -->
-    {{-- @include('pages.home.template') --}}
+    @include('pages.home.template')
     <!-- end template -->
 
     <!-- niches -->
