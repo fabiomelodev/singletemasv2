@@ -22,7 +22,7 @@
         {!! $plan->description !!}
     </span>
 
-    <div class="mb-6">
+    <div class="mt-4 mb-6">
 
         <span class="plan-item-price">
             {{ $plan->price }}
