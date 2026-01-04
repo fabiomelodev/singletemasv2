@@ -2,6 +2,7 @@
 
 <head>
     <title>Single Temas | Desenvolvimento de site e sistemas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/js/app.js')
 </head>
 

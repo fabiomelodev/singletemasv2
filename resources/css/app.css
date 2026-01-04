@@ -265,3 +265,7 @@
         @apply py-20 px-4 sm:px-6 lg:px-8;
     }
 }
+
+.swiper-pagination-bullet-active {
+    background-color: #FFF !important;
+}

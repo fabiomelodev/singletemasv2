@@ -1,7 +1,8 @@
-import './bootstrap';
-import '../css/app.css';
-import Alpine from 'alpinejs'
+import "./bootstrap";
+import "../css/app.css";
+import "./components/swiper";
+import Alpine from "alpinejs";
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
 
-Alpine.start()
+Alpine.start();

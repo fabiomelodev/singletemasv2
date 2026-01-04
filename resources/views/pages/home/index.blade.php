@@ -12,30 +12,30 @@
     <!-- end services -->
 
     <!-- cases -->
-    @include('pages.home.cases', ['projects' => $projects])
+    {{-- @include('pages.home.cases', ['projects' => $projects]) --}}
     <!-- end cases -->
 
     <!-- how works -->
-    @include('pages.home.how-works')
+    {{-- @include('pages.home.how-works') --}}
     <!-- end how works -->
 
     <!-- develop website -->
-    @include('pages.home.develop-website')
+    {{-- @include('pages.home.develop-website') --}}
     <!-- end develop website -->
 
     <!-- process -->
-    @include('pages.home.process')
+    {{-- @include('pages.home.process') --}}
     <!-- end process -->
 
     <!-- template -->
-    @include('pages.home.template')
+    {{-- @include('pages.home.template') --}}
     <!-- end template -->
 
     <!-- niches -->
-    @include('pages.home.niches', ['niches' => $niches])
+    {{-- @include('pages.home.niches', ['niches' => $niches]) --}}
     <!-- end niches -->
 
     <!-- testimonials -->
-    <x-testimonials :testimonials="$testimonials" />
+    {{-- <x-testimonials :testimonials="$testimonials" /> --}}
     <!-- end testimonials -->
 </x-layout.base>
