@@ -12,7 +12,7 @@
     <!-- end services -->
 
     <!-- cases -->
-    {{-- @include('pages.home.cases', ['projects' => $projects]) --}}
+    @include('pages.home.cases', ['projects' => $projects])
     <!-- end cases -->
 
     <!-- how works -->

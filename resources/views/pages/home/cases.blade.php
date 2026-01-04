@@ -20,7 +20,7 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-3 gap-y-6 gap-x-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4">
 
             @foreach($projects as $project)
                 <div class="case-item">

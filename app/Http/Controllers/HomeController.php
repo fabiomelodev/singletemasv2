@@ -17,7 +17,7 @@ class HomeController extends Controller
 
         $services = Service::active()->get();
 
-        $projects = Project::active()->get();
+        $projects = Project::active()->limit(6)->get();
 
         $niches = Niche::active()->get();
 
