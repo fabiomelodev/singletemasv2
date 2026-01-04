@@ -1,4 +1,4 @@
-<section class="py-20 px-4 sm:px-6 lg:px-8" id="como-funciona">
+<section class="pt-20 pb-10 lg:pb-20 px-4 sm:px-6 lg:px-8" id="como-funciona">
 
     <div class="max-w-7xl mx-auto">
 

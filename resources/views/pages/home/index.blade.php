@@ -20,7 +20,7 @@
     <!-- end how works -->
 
     <!-- develop website -->
-    {{-- @include('pages.home.develop-website') --}}
+    @include('pages.home.develop-website')
     <!-- end develop website -->
 
     <!-- process -->

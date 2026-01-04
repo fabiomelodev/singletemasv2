@@ -28,37 +28,19 @@
                         ],
                         'link' => '#'
                     ],
-
-                    // [
-                    //     'phrase' => 'Adquira um site modelo padrão',
-                    //     'price' => 'R$ 99,90',
-                    //     'models' => [
-                    //         'Landing Page',
-                    //     ],
-                    //     'resources' => [
-                    //         'Painel de controle',
-                    //         'Imagens e textos editáveis',
-                    //         'Responsivo',
-                    //         'SEO',
-                    //         'Formulário para contato',
-                    //         'Integrações com Whatsapp e mapa',
-                    //         'Garantia com manutenção e suporte por 3 meses'
-                    //     ],
-                    //     'link' => '#'
-                    // ],
                 ];
             @endphp
 
             @foreach($cards as $card)
                 <div
-                    class="border border-purple-500/20 rounded-2xl overflow-hidden grid grid-cols-2 gap-6 bg-slate-900/50 backdrop-blur-sm p-10">
+                    class="border border-purple-500/20 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-6 bg-slate-900/50 backdrop-blur-sm p-6 lg:p-10">
 
                     <div class="pt-6">
 
-                        <h3 class="text-xl font-semibold text-white">
+                        <h3 class="lg:text-xl font-semibold text-white">
                             {{  $card['phrase'] }}
 
-                            <span class="block text-7xl font-black text-white">
+                            <span class="block text-6xl lg:text-7xl font-black text-white">
                                 {{  $card['price'] }}
                             </span>
                         </h3>
@@ -99,7 +81,7 @@
                             @endforeach
                         </ul>
 
-                        <div class="flex mt-12">
+                        <div class="lg:flex mt-12">
                             <x-button-cta
                                 url="https://wa.me/5511998043538?text=Quero meu site personalizado. Como posso prosseguir?" />
                         </div>
