@@ -14,6 +14,15 @@ class Plan extends Model
         'resources' => 'array'
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->order = 1;
+        });
+    }
+
     public function niche(): BelongsTo
     {
         return $this->belongsTo(Niche::class);
