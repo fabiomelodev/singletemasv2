@@ -18,9 +18,9 @@
         </h3>
     </div>
 
-    <p class="plan-item-description">
-        {{ $plan->description }}
-    </p>
+    <span class="plan-item-description">
+        {!! $plan->description !!}
+    </span>
 
     <div class="mb-6">
 
