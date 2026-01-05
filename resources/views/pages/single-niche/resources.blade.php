@@ -19,7 +19,7 @@
                 <table class="w-full">
                     <thead class="bg-slate-900/80">
                         <tr>
-                            <th class="text-left text-gray-300 font-semibold p-6">Recursos Ministeriais</th>
+                            <th class="text-left text-gray-300 font-semibold p-6">Recursos</th>
                             <th class="text-center text-blue-400 font-semibold p-6">Essencial</th>
                             <th class="text-center text-purple-400 font-semibold bg-purple-900/20 p-6">Completo</th>
                             <th class="text-center text-yellow-400 font-semibold p-6">Premium</th>
