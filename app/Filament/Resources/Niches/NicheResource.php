@@ -5,6 +5,8 @@ namespace App\Filament\Resources\Niches;
 use App\Filament\Resources\Niches\Pages\CreateNiche;
 use App\Filament\Resources\Niches\Pages\EditNiche;
 use App\Filament\Resources\Niches\Pages\ListNiches;
+use App\Filament\Resources\Niches\RelationManagers\PlansRelationManager;
+use App\Filament\Resources\Niches\RelationManagers\ResourcesRelationManager;
 use App\Filament\Resources\Niches\Schemas\NicheForm;
 use App\Filament\Resources\Niches\Tables\NichesTable;
 use App\Models\Niche;
@@ -57,7 +59,8 @@ class NicheResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PlansRelationManager::class,
+            ResourcesRelationManager::class,
         ];
     }
 
