@@ -64,7 +64,7 @@
                                 </p>
 
                                 <p class="text-gray-300">
-                                    {{  $plan->observation }}
+                                    {!! $plan->observation !!}
                                 </p>
                             </div>
 
