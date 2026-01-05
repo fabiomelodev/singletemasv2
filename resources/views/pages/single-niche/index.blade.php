@@ -2,8 +2,8 @@
     <x-menu :menu="$menu" />
 
     <!-- hero -->
-    <x-hero tag="{{ $niche->banner_tag }}" titleFirst="{{ $niche->banner_title_first }}" titleSecond="{{ $niche->banner_title_second }}"
-        description="{{ $niche->banner_description }}"
+    <x-hero tag="{{ $niche->banner_tag }}" titleFirst="{{ $niche->banner_title_first }}"
+        titleSecond="{{ $niche->banner_title_second }}" description="{!! $niche->banner_description !!}"
         buttonText="Conhecer os planos" buttonLink="#planos" />
     <!-- end hero -->
 
