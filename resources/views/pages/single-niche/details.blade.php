@@ -63,9 +63,9 @@
                                     Ideal para:
                                 </p>
 
-                                <p class="text-gray-300">
+                                <span class="block text-gray-300">
                                     {!! $plan->observation !!}
-                                </p>
+                                </span>
                             </div>
 
                             <div>
