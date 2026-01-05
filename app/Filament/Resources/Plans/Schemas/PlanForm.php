@@ -27,33 +27,6 @@ class PlanForm
                         RichEditor::make('excerpt')
                             ->label('Resumo')
                             ->required(),
-                        Section::make('Detalhe do nicho')
-                            ->schema([
-                                RichEditor::make('description')
-                                    ->label('Descrição')
-                                    ->required(),
-                                RichEditor::make('observation')
-                                    ->label('Observação')
-                                    ->required()
-                                    ->columnSpanFull(),
-                                Repeater::make('items')
-                                    ->label('Itens')
-                                    ->required()
-                                    ->schema([
-                                        TextInput::make('name')
-                                            ->label('Nome'),
-                                        Textarea::make('description')
-                                            ->label('Descrição')
-                                    ]),
-                                Repeater::make('resources')
-                                    ->label('Recursos')
-                                    ->required()
-                                    ->schema([
-                                        TextInput::make('name')
-                                            ->label('Nome')
-                                    ])
-                            ])
-
                     ]),
                 Section::make()
                     ->columnSpan(3)
@@ -72,6 +45,33 @@ class PlanForm
                             ->relationship('niche', 'name')
                             ->required(),
                     ]),
+                Section::make('Detalhes do nicho')
+                    ->columnSpan(9)
+                    ->schema([
+                        RichEditor::make('description')
+                            ->label('Descrição')
+                            ->required(),
+                        RichEditor::make('observation')
+                            ->label('Observação')
+                            ->required()
+                            ->columnSpanFull(),
+                        Repeater::make('items')
+                            ->label('Itens')
+                            ->required()
+                            ->schema([
+                                TextInput::make('name')
+                                    ->label('Nome'),
+                                Textarea::make('description')
+                                    ->label('Descrição')
+                            ]),
+                        Repeater::make('resources')
+                            ->label('Recursos')
+                            ->required()
+                            ->schema([
+                                TextInput::make('name')
+                                    ->label('Nome')
+                            ])
+                    ])
             ]);
     }
 }
