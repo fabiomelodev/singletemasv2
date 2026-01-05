@@ -48,7 +48,7 @@
                 </svg>
 
                 <span class="plan-item-list-item-title">
-                    {{ $item['name'] }}
+                    {{ $item['name'] }} <br />
                     {{ $item['description'] }}
                 </span>
             </li>
