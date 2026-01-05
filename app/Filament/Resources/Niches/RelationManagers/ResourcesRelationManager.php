@@ -47,8 +47,13 @@ class ResourcesRelationManager extends RelationManager
                             ->label('Planos')
                             ->columns(3)
                             ->schema([
-                                TextInput::make('name')
-                                    ->label('Nome'),
+                                Select::make('name')
+                                    ->label('Nome')
+                                    ->options([
+                                        'Essencial' => 'Essencial',
+                                        'Completo' => 'Completo',
+                                        'Premium' => 'Premium'
+                                    ]),
                                 Select::make('type')
                                     ->label('Tipo')
                                     ->live()
