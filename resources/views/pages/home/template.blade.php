@@ -2,6 +2,17 @@
 
     <div class="max-w-7xl mx-auto">
 
+        <div class="mb-16">
+            <h2 class="section-title">
+                Tenha um Site Modelo Pronto
+            </h2>
+
+            <p class="section-description">
+                Adquira um site modelo padrão, desenvolvido para atender às necessidades básicas do seu negócio,
+                garantindo uma presença online eficaz e profissional
+            </p>
+        </div>
+
         @php
             $card = [
                 'phrase' => 'Adquira um site modelo padrão',
@@ -18,7 +29,7 @@
                     'Integrações com Whatsapp e mapa',
                     'Garantia com manutenção e suporte por 3 meses'
                 ],
-                'link' => '#'
+                'whatsapp_text' => 'Quero um site modelo pronto. Como posso prosseguir?'
             ];
         @endphp
 

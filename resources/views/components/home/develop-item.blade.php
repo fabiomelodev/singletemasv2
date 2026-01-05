@@ -49,7 +49,7 @@
 
         <div class="lg:flex mt-12">
             <x-button-cta
-                url="https://wa.me/5511998043538?text=Quero meu site personalizado. Como posso prosseguir?" />
+                url="https://wa.me/5511998043538?text={{ $card['whatsapp_text'] }}" />
         </div>
     </div>
 </div>

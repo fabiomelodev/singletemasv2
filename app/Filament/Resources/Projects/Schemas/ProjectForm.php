@@ -29,7 +29,8 @@ class ProjectForm
                     ->columnSpan(3)
                     ->schema([
                         FileUpload::make('thumbnail')
-                            ->image(),
+                            ->image()
+                            ->disk('public'),
                         Select::make('niche_id')
                             ->label('Nicho')
                             ->relationship('niche', 'name')

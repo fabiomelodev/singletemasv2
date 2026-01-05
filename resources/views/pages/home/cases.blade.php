@@ -27,7 +27,7 @@
                     <div clas="case-item-thumbnail"
                         style="width:90%;height:150px;margin-top:-56px;border:1px solid rgba(0, 0, 0, .2);border-radius:10px;overflow:hidden">
                         @if($project->thumbnail)
-                            <img class="w-full h-full object-cover" src="{{  $project->thumbnail }}"
+                            <img class="w-full h-full object-cover" src="{{ Storage::disk('public')->url($project->thumbnail) }}"
                                 alt="{{  $project->name }}" />
                         @else
                             <div class="w-full h-full flex items-end bg-purple-800 p-4">
