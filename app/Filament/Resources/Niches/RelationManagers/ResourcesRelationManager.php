@@ -81,6 +81,7 @@ class ResourcesRelationManager extends RelationManager
                 TextColumn::make('order')
                     ->label('Ordem'),
             ])
+            ->defaultSort('order', 'asc')
             ->recordActions([
                 EditAction::make()
                     ->iconButton()
