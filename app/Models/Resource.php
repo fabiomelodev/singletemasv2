@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Resource extends Model
@@ -11,6 +12,11 @@ class Resource extends Model
     protected $casts = [
         'plans' => 'array'
     ];
+
+    public function scopeOrderAsc(Builder $query): Builder
+    {
+        return $query->orderBy('order', 'asc');
+    }
 
     public function niche()
     {

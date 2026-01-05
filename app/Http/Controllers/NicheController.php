@@ -46,7 +46,7 @@ class NicheController extends Controller
 
         $testimonials = $niche->testimonials()->get();
 
-        $resources = $niche->resources()->get();
+        $resources = $niche->resources()->orderAsc()->get();
 
         return view('pages.single-niche.index', [
             'menu' => $menu,
