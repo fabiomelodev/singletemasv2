@@ -49,7 +49,7 @@
 
                 <span class="plan-item-list-item-title">
                     {{ $item['name'] }} <br />
-                    <span class="text-sm font-bold">
+                    <span class="text-xs font-bold">
                         {{ $item['description'] }}
                     </span>
                 </span>
