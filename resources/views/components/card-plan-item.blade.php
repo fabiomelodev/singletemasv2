@@ -49,7 +49,9 @@
 
                 <span class="plan-item-list-item-title">
                     {{ $item['name'] }} <br />
-                    {{ $item['description'] }}
+                    <span class="text-sm font-bold">
+                        {{ $item['description'] }}
+                    </span>
                 </span>
             </li>
         @endforeach
