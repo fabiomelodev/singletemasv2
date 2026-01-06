@@ -276,7 +276,6 @@
 
         <!-- desktop -->
         <div class="hidden lg:grid grid-cols-3 gap-x-6 mt-10">
-
             <x-home.objective-first-item />
             <x-home.objective-second-item />
             <x-home.objective-third-item />

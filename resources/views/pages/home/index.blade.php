@@ -2,13 +2,13 @@
     <x-menu :menu="$menu" />
 
     <!-- hero -->
-    <x-hero tag="Soluções digitais" titleFirst="Transforme sua Presença Online" titleSecond="com um Site Personalizado"
-        description="A Single Temas oferece tudo que o seu negócio precisa: site moderno, gestão de membros, agenda de eventos e pedidos de oração. Conecte-se no digital para continuar crescendo."
+    <x-hero tag="{{  $settings->banner_tag }}" titleFirst="{{ $settings->banner_title_first }}" titleSecond="{{ $settings->banner_title_second }}"
+        description="{{ $settings->banner_description }}"
         buttonText="Conhecer os planos" buttonLink="#" />
     <!-- end hero -->
 
     <!-- services -->
-    @include('pages.home.services', ['services' => $services])
+    @include('pages.home.services', ['settings' => $settings])
     <!-- end services -->
 
     <!-- cases -->

@@ -36,7 +36,7 @@ class PageResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'Páginas';
+        return 'Páginas Simples';
     }
 
     public static function getModelLabel(): string

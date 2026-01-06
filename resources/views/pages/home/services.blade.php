@@ -4,18 +4,18 @@
 
         <div class="mb-16">
             <h2 class="section-title">
-                Nossos Serviços
+                {{  $settings->section_service_title }}
             </h2>
 
             <p class="section-description">
-                Conheça todos os nossos serviços e o que oferemos de melhor
+                {{  $settings->section_service_description }}
             </p>
         </div>
 
         <!-- desktop -->
         <div class="hidden lg:grid grid-cols-4 gap-y-6 gap-x-4">
 
-            @foreach($services as $service)
+            @foreach($settings->services as $service)
                 <div
                     class="h-full transition duration-500 hover:-translate-y-2 shadow-2xl shadow-purple-500/20 border border-purple-500/30 rounded-2xl relative flex flex-col gap-3 bg-slate-900/50 backdrop-blur-sm p-8  ">
 
@@ -33,13 +33,13 @@
                         </svg>
 
                         <h3 class="text-lg font-bold text-white">
-                            {{  $service->name }}
+                            {{  $service['name'] }}
                         </h3>
                     </div>
 
                     <div>
                         <p class="text-sm text-gray-300">
-                            {{  $service->description }}
+                            {{  $service['description'] }}
                         </p>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="swiper-wrapper h-[unset!important]">
 
                     <!-- slide -->
-                    @foreach($services as $service)
+                    @foreach($settings->services as $service)
                         <div class="swiper-slide">
                             <div
                                 class="transition duration-500 hover:-translate-y-2 border border-purple-500/30 rounded-2xl relative flex flex-col gap-3 bg-slate-900/50 backdrop-blur-sm p-8">
@@ -74,13 +74,13 @@
                                     </svg>
 
                                     <h3 class="text-lg font-bold text-white">
-                                        {{  $service->name }}
+                                        {{  $service['name'] }}
                                     </h3>
                                 </div>
 
                                 <div>
                                     <p class="text-sm text-gray-300">
-                                        {{  $service->description }}
+                                        {{  $service['description'] }}
                                     </p>
                                 </div>
                             </div>
