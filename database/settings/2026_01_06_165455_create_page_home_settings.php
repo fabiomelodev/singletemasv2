@@ -14,5 +14,8 @@ return new class extends SettingsMigration {
         $this->migrator->add('groupPageHome.section_service_description', '');
         $this->migrator->add('groupPageHome.services', []);
         $this->migrator->add('groupPageHome.cases', []);
+        $this->migrator->add('groupPageHome.website_section_title', '');
+        $this->migrator->add('groupPageHome.website_section_description', '');
+        $this->migrator->add('groupPageHome.website_steps', []);
     }
 };

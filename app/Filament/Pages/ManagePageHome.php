@@ -11,6 +11,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Pages\SettingsPage;
+use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
@@ -93,6 +94,9 @@ class ManagePageHome extends SettingsPage
                                         Textarea::make('description')
                                             ->label('Descrição')
                                             ->required(),
+                                        Textarea::make('website_notice')
+                                            ->label('Observação Final')
+                                            ->required(),
                                         TextInput::make('items_title_first')
                                             ->label('Título Itens Primeiro Bloco')
                                             ->required(),
@@ -115,7 +119,24 @@ class ManagePageHome extends SettingsPage
                                                     ->required()
                                             ])->minItems(1)
                                             ->required(),
+                                    ]),
+                                Grid::make()
+                                    ->columns(3)
+                                    ->schema([
+                                        TextInput::make('website_objective_title_first')
+                                            ->label('Primeiro Título'),
+                                        TextInput::make('website_objective_title_second')
+                                            ->label('Segundo Título'),
+                                        TextInput::make('website_objective_title_third')
+                                            ->label('Terceiro Título'),
+                                        Textarea::make('website_objective_description_first')
+                                            ->label('Primeira Descrição'),
+                                        Textarea::make('website_objective_description_second')
+                                            ->label('Segunda Descrição'),
+                                        Textarea::make('website_objective_description_third')
+                                            ->label('Terceira Descrição'),
                                     ])
+
                             ]),
                     ])
             ]);

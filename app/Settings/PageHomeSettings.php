@@ -24,6 +24,12 @@ class PageHomeSettings extends Settings
 
     public array $cases;
 
+    public string $website_section_title;
+
+    public string $website_section_description;
+
+    public array $website_steps;
+
     public static function group(): string
     {
         return 'groupPageHome';
