@@ -4,7 +4,7 @@
     <!-- hero -->
     <x-hero tag="{{ $niche->banner_tag }}" titleFirst="{{ $niche->banner_title_first }}"
         titleSecond="{{ $niche->banner_title_second }}" description="{!! $niche->banner_description !!}"
-        buttonText="Conhecer os planos" buttonLink="#planos" />
+        buttonText="Conhecer os Planos" buttonLink="#planos" />
     <!-- end hero -->
 
     <!-- develop website -->
@@ -18,7 +18,7 @@
     <!-- template -->
     <x-product :product="$productTemplate" />
     <!-- end template -->
-    
+
     <!-- resources -->
     @include('pages.single-niche.resources', ['niche' => $niche, 'resources' => $resources])
     <!-- end resources -->

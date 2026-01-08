@@ -4,7 +4,7 @@
     <!-- hero -->
     <x-hero cover="{{  $settings->banner_image }}" tag="{{  $settings->banner_tag }}" titleFirst="{{ $settings->banner_title_first }}" titleSecond="{{ $settings->banner_title_second }}"
         description="{{ $settings->banner_description }}"
-        buttonText="Conhecer os planos" buttonLink="#" />
+        buttonText="Conhecer os Planos" buttonLink="#" />
     <!-- end hero -->
 
     <!-- services -->
