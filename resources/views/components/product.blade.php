@@ -30,7 +30,7 @@
                         <p class="font-medium text-white">
                             Modelos de Sites:
                         </p>
-                    </div>s
+                    </div>
 
                     <div class="flex flex-wrap gap-4 mt-2">
 
