@@ -97,7 +97,7 @@
         <!-- end mobile -->
 
         <div class="flex justify-center mt-12">
-            <x-button-cta url="https://wa.me/5511998043538?text=Quero falar com um especialista?" />
+            <x-button-cta url="https://wa.me/5511998043538?text=Quero falar com um especialista!" />
         </div>
     </div>
 </section>
