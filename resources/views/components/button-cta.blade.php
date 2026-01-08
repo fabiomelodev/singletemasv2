@@ -12,7 +12,7 @@
     </svg>
 
     <span class=" text-xl text-purple-300">
-        Fale com especialista
+        Fale Com Especialista
         {{-- Quero meu site --}}
     </span>
 </a>
