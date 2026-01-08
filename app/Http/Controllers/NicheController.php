@@ -47,7 +47,7 @@ class NicheController extends Controller
 
         $productDevelopWebiste = $niche->products()->where('slug', 'desenvolvimento-de-sites')->first();
 
-        $productTemplate = Product::where('slug', 'site-modelo-pronto')->first();
+        $productTemplate = $niche->products()->where('slug', 'site-modelo-pronto')->first();
 
         $testimonials = $niche->testimonials()->get();
 
