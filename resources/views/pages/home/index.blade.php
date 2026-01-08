@@ -2,7 +2,7 @@
     <x-menu :menu="$menu" />
 
     <!-- hero -->
-    <x-hero tag="{{  $settings->banner_tag }}" titleFirst="{{ $settings->banner_title_first }}" titleSecond="{{ $settings->banner_title_second }}"
+    <x-hero cover="{{  $settings->banner_image }}" tag="{{  $settings->banner_tag }}" titleFirst="{{ $settings->banner_title_first }}" titleSecond="{{ $settings->banner_title_second }}"
         description="{{ $settings->banner_description }}"
         buttonText="Conhecer os planos" buttonLink="#" />
     <!-- end hero -->

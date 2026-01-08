@@ -1,4 +1,5 @@
 @props([
+    'cover' => null,
     'tag' => null,
     'titleFirst',
     'titleSecond',
@@ -7,8 +8,16 @@
     'buttonLink'
 ])
 
+@php
+    if(isset($cover)) {
+       $cover = Storage::url($cover); 
+    } else {
+        $cover = 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3';
+    }
+@endphp
+
 <section class="overflow-hidden relative bg-cover bg-no-repeat bg-center py-20 px-4 sm:px-6 lg:px-8"
-    style="background-image: url(https://images.unsplash.com/photo-1438232992991-995b7058bbb3)">
+    style="background-image: url({{ $cover }})">
 
     <div class="inset-0 absolute bg-gradient-to-b from-purple-600/80 to-black/50"></div>
 
