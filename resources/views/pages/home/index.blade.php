@@ -16,7 +16,7 @@
     <!-- end cases -->
 
     <!-- how works -->
-    @include('pages.home.how-works')
+    @include('pages.home.how-works', ['settings' => $settings])
     <!-- end how works -->
 
     <!-- develop website -->

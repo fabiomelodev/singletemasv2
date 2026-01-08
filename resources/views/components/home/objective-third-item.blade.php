@@ -1,8 +1,7 @@
 <div
     class="transition-colors border border-yellow-500/20 rounded-xl overflow-hidden backdrop-blur-sm hover:border-yellow-500/40 bg-slate-900/50 cursor-pointer">
 
-    <div
-        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/30 transition-colors">
+    <div class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/30 transition-colors">
         <span class="text-white font-semibold pr-4">
             Nosso objetivo
         </span>
@@ -18,10 +17,14 @@
 
     <div>
         <div class="text-gray-300 leading-relaxed border-t border-slate-800 text-sm pb-5 px-6">
-            <p class="pt-4">
+            <span class="objective-item-content">
+                {!! $description !!}
+            </span>
+
+            {{-- <p class="pt-4">
                 Mais do que criar um site, nosso objetivo é ser um parceiro digital da sua empresa, cuidando
                 da presença online para que vocês possam focar no mais importante: no seu negócio.
-            </p>
+            </p> --}}
         </div>
     </div>
 </div>

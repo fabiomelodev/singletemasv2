@@ -12,6 +12,7 @@
 }
 
 @layer components {
+
     .content ul,
     .page-content ul {
         @apply list-disc mt-2 mb-4 pl-4;
@@ -231,6 +232,82 @@
 
     .plan-detail-item:nth-of-type(3) .plan-detail-item-list-item-pointer {
         @apply text-yellow-400;
+    }
+
+    .plan-detail-item-wrapper-notice {
+        @apply shadow-lg border rounded-lg inline-flex gap-x-2 items-center bg-slate-900/50 mt-8 p-4;
+    }
+
+    .plan-detail-item:nth-of-type(1) .plan-detail-item-wrapper-notice {
+        @apply border-blue-500/20;
+    }
+
+    .plan-detail-item:nth-of-type(2) .plan-detail-item-wrapper-notice {
+        @apply border-purple-500/20;
+    }
+
+    .plan-detail-item-notice-icon {
+        @apply w-8 h-8 fill-blue-400;
+    }
+
+    .plan-detail-item:nth-of-type(1) .plan-detail-item-notice-icon {
+        @apply fill-blue-400;
+    }
+
+    .plan-detail-item:nth-of-type(2) .plan-detail-item-notice-icon {
+        @apply fill-purple-400;
+    }
+
+    .plan-detail-item-notice-text {
+        @apply text-sm font-semibold;
+    }
+
+    .plan-detail-item:nth-of-type(1) .plan-detail-item-notice-text {
+        @apply text-blue-400;
+    }
+
+    .plan-detail-item:nth-of-type(2) .plan-detail-item-notice-text {
+        @apply text-purple-400;
+    }
+
+    .objective-item {
+        @apply transition-colors border rounded-xl overflow-hidden backdrop-blur-sm bg-slate-900/50 cursor-pointer;
+    }
+
+    .objective-item-first {
+        @apply border-blue-500/20 hover:border-blue-500/40;
+    }
+
+    .objective-item-second {
+        @apply border-purple-500/20 hover:border-purple-500/40;
+    }
+
+    .objective-item-third {
+        @apply border-yellow-500/20 hover:border-yellow-500/40;
+    }
+
+    .objective-item-icon {
+        @apply w-5 h-5 hidden;
+    }
+
+    .objective-item-first .objective-item-icon:nth-of-type(1) {
+        @apply block fill-blue-400;
+    }
+
+    .objective-item-second .objective-item-icon:nth-of-type(2) {
+        @apply block fill-purple-400;
+    }
+
+    .objective-item-third .objective-item-icon:nth-of-type(3) {
+        @apply block fill-yellow-400;
+    }
+
+    .objective-item-content {
+        @apply block;
+    }
+
+    .objective-item-content ul {
+        @apply list-disc mt-2 pl-4;
     }
 
     .testimonials {

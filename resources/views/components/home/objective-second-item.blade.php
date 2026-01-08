@@ -1,8 +1,7 @@
 <div
     class="transition-colors  border border-purple-500/20 rounded-xl overflow-hidden backdrop-blur-sm hover:border-purple-500/40  bg-slate-900/50 cursor-pointer">
 
-    <div
-        class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/30 transition-colors">
+    <div class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/30 transition-colors">
         <span class="text-white font-semibold pr-4">
             Importante saber
         </span>
@@ -19,7 +18,11 @@
     <div>
         <div class=" text-gray-300 leading-relaxed border-t border-slate-800 text-sm pt-4 pb-5 px-6">
 
-            <ul>
+            <span class="objective-item-content">
+                {!! $description !!}
+            </span>
+
+            {{-- <ul>
                 <li class="flex items-start gap-2">
                     <span class="plan-detail-item-list-item-pointer">•</span>
                     <span class="text-gray-300">
@@ -47,7 +50,7 @@
                         Tudo é explicado de forma simples e transparente
                     </span>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
     </div>
 </div>

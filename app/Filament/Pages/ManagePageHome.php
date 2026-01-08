@@ -8,6 +8,7 @@ use BackedEnum;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Pages\SettingsPage;
@@ -77,15 +78,15 @@ class ManagePageHome extends SettingsPage
                                     ->options(Project::orderBy('name', 'asc')->pluck('name', 'id'))
                                     ->required()
                             ]),
-                        Tab::make('Desenvolvimento')
+                        Tab::make('Modelo de Trabalho')
                             ->schema([
-                                TextInput::make('website_section_title')
+                                TextInput::make('mode_section_title')
                                     ->label('Título da Seção')
                                     ->required(),
-                                Textarea::make('website_section_description')
+                                Textarea::make('mode_section_description')
                                     ->label('Descrição da Seção')
                                     ->required(),
-                                Repeater::make('website_steps')
+                                Repeater::make('mode_steps')
                                     ->label('Etapas')
                                     ->schema([
                                         TextInput::make('name')
@@ -94,7 +95,7 @@ class ManagePageHome extends SettingsPage
                                         Textarea::make('description')
                                             ->label('Descrição')
                                             ->required(),
-                                        Textarea::make('website_notice')
+                                        Textarea::make('notice')
                                             ->label('Observação Final')
                                             ->required(),
                                         TextInput::make('items_title_first')
@@ -109,35 +110,29 @@ class ManagePageHome extends SettingsPage
                                             ])->minItems(1)
                                             ->required(),
                                         TextInput::make('items_title_second')
-                                            ->label('Título Itens Segundo Bloco')
-                                            ->required(),
+                                            ->label('Título Itens Segundo Bloco'),
                                         Repeater::make('items_second')
                                             ->label('Itens')
                                             ->schema([
                                                 TextInput::make('name')
                                                     ->label('Nome')
-                                                    ->required()
-                                            ])->minItems(1)
-                                            ->required(),
+                                            ])
                                     ]),
-                                Grid::make()
-                                    ->columns(3)
+                                Repeater::make('mode_objectives')
+                                    ->label('Objetivos')
                                     ->schema([
-                                        TextInput::make('website_objective_title_first')
-                                            ->label('Primeiro Título'),
-                                        TextInput::make('website_objective_title_second')
-                                            ->label('Segundo Título'),
-                                        TextInput::make('website_objective_title_third')
-                                            ->label('Terceiro Título'),
-                                        Textarea::make('website_objective_description_first')
-                                            ->label('Primeira Descrição'),
-                                        Textarea::make('website_objective_description_second')
-                                            ->label('Segunda Descrição'),
-                                        Textarea::make('website_objective_description_third')
-                                            ->label('Terceira Descrição'),
+                                        TextInput::make('name')
+                                            ->label('Nome')
+                                            ->required(),
+                                        RichEditor::make('description')
+                                            ->label('Descrição')
+                                            ->required(),
                                     ])
+                                    ->defaultItems(3)
+                                    ->minItems(3)
+                                    ->maxItems(3),
 
-                            ]),
+                            ])
                     ])
             ]);
     }

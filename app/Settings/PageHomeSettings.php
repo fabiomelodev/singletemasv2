@@ -24,11 +24,13 @@ class PageHomeSettings extends Settings
 
     public array $cases;
 
-    public string $website_section_title;
+    public string $mode_section_title;
 
-    public string $website_section_description;
+    public string $mode_section_description;
 
-    public array $website_steps;
+    public array $mode_steps;
+
+    public array $mode_objectives;
 
     public static function group(): string
     {
