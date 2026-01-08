@@ -9,7 +9,6 @@
 
             <p class="section-description">
                 Veja como a Single Temas tem aumentado visibilidade de empresas e igrejas
-                {{-- Veja como a Single Temas tem abençoado igrejas e ministérios pelo Brasil --}}
             </p>
         </div>
 

@@ -19,7 +19,7 @@
             </h2>
 
             <p class="section-description">
-                Dúvidas sobre como a Single Temas pode ajudar seu ministério
+                Dúvidas sobre como a Single Temas pode ajudar sua empresa e igreja
             </p>
         </div>
 
