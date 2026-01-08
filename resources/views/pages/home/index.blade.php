@@ -24,7 +24,7 @@
     <!-- end develop website -->
 
     <!-- process -->
-    @include('pages.home.process')
+    <x-processes />
     <!-- end process -->
 
     <!-- template -->

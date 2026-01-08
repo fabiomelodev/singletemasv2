@@ -17,12 +17,19 @@ use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
+use UnitEnum;
 
 class ManagePageHome extends SettingsPage
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCog6Tooth;
 
     protected static string $settings = PageHomeSettings::class;
+
+    protected static string|UnitEnum|null $navigationGroup = 'Páginas';
+
+    protected static ?string $navigationLabel = 'Página Inicial';
+
+    protected static ?string $title = 'Página Inicial';
 
     public function form(Schema $schema): Schema
     {
