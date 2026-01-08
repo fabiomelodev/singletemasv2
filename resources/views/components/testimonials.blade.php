@@ -1,10 +1,10 @@
-<section class="testimonials" id="testemunhos">
+<section class="testimonials" id="depoimentos">
 
     <div class="max-w-7xl mx-auto">
 
         <div class="mb-16">
             <h2 class="section-title">
-                Testemunhos
+                Depoimentos
             </h2>
 
             <p class="section-description">
