@@ -14,7 +14,7 @@
 
         <div class="mb-8">
             <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-center text-white mb-4">
-                Trabalhamos em Duas Etapas Cmplementares:
+                Trabalhamos em Duas Etapas Complementares:
             </h2>
         </div>
 
