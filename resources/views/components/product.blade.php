@@ -28,9 +28,9 @@
 
                     <div class="mt-6">
                         <p class="font-medium text-white">
-                            Modelos de sites:
+                            Modelos de Sites:
                         </p>
-                    </div>
+                    </div>s
 
                     <div class="flex flex-wrap gap-4 mt-2">
 
@@ -63,8 +63,7 @@
                     </ul>
 
                     <div class="lg:flex mt-12">
-                        <x-button-cta
-                            url="{{ $product->button_link }}?text={{ $product->button_text }}" />
+                        <x-button-cta url="{{ $product->button_link }}?text={{ $product->button_text }}" />
                     </div>
                 </div>
             </div>
