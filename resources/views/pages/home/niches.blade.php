@@ -12,10 +12,12 @@
             </p>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-center gap-6">
+        <div class="flex flex-col md:flex-row flex-wrap justify-center gap-6">
 
             @foreach($niches as $niche)
-                <x-card-niche-item :niche="$niche" />
+                <div class="w-full lg:w-4/12">
+                    <x-card-niche-item :niche="$niche" />
+                </div>
             @endforeach
         </div>
     </div>

@@ -1,4 +1,4 @@
-<div class="plan-item">
+<div class="plan-item h-full">
 
     <div class="plan-item-title-wrapper">
 
