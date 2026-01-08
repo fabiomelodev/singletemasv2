@@ -7,10 +7,18 @@
         buttonText="Conhecer os planos" buttonLink="#planos" />
     <!-- end hero -->
 
+    <!-- develop website -->
+    <x-product :product="$productDevelopWebiste" />
+    <!-- end develop website -->
+
     <!-- plans -->
     @include('pages.single-niche.plans', ['niche' => $niche, 'plans' => $plans])
     <!-- end plans -->
 
+    <!-- template -->
+    <x-product :product="$productTemplate" />
+    <!-- end template -->
+    
     <!-- resources -->
     @include('pages.single-niche.resources', ['niche' => $niche, 'resources' => $resources])
     <!-- end resources -->

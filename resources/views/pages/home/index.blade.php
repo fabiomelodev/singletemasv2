@@ -20,7 +20,7 @@
     <!-- end how works -->
 
     <!-- develop website -->
-    @include('pages.home.develop-website')
+    <x-product :product="$productDevelopWebiste" />
     <!-- end develop website -->
 
     <!-- process -->
@@ -28,7 +28,7 @@
     <!-- end process -->
 
     <!-- template -->
-    @include('pages.home.template')
+    <x-product :product="$productTemplate" />
     <!-- end template -->
 
     <!-- niches -->

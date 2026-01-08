@@ -6,6 +6,7 @@ use App\Models\Faq;
 use App\Models\Menu;
 use App\Models\Niche;
 use App\Models\Plan;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
@@ -44,6 +45,10 @@ class NicheController extends Controller
 
         $plans = $niche->plans()->get();
 
+        $productDevelopWebiste = $niche->products()->where('slug', 'desenvolvimento-de-sites')->first();
+
+        $productTemplate = Product::where('slug', 'site-modelo-pronto')->first();
+
         $testimonials = $niche->testimonials()->get();
 
         $resources = $niche->resources()->orderAsc()->get();
@@ -52,6 +57,8 @@ class NicheController extends Controller
             'menu' => $menu,
             'niche' => $niche,
             'plans' => $plans,
+            'productDevelopWebiste' => $productDevelopWebiste,
+            'productTemplate' => $productTemplate,
             'resources' => $resources,
             'testimonials' => $testimonials
         ]);
