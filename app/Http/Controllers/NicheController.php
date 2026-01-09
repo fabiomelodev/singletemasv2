@@ -53,6 +53,8 @@ class NicheController extends Controller
 
         $resources = $niche->resources()->orderAsc()->get();
 
+        $projects = $niche->projects()->get();
+
         return view('pages.single-niche.index', [
             'menu' => $menu,
             'niche' => $niche,
@@ -60,6 +62,7 @@ class NicheController extends Controller
             'productDevelopWebiste' => $productDevelopWebiste,
             'productTemplate' => $productTemplate,
             'resources' => $resources,
+            'projects' => $projects,
             'testimonials' => $testimonials
         ]);
     }

@@ -52,6 +52,11 @@ class Niche extends Model
         return $this->hasMany(Product::class);
     }
 
+    public function projects(): HasMany
+    {
+        return $this->hasMany(Project::class);
+    }
+
     public function resources(): HasMany
     {
         return $this->hasMany(Resource::class);

@@ -27,6 +27,10 @@
     @include('pages.single-niche.details', ['niche' => $niche, 'plans' => $plans])
     <!-- end details -->
 
+    <!-- cases -->
+    <x-cases :projects="$projects" />
+    <!-- end cases -->
+
     <!-- testimonials -->
     <x-testimonials :testimonials="$testimonials" />
     <!-- end testimonials -->
