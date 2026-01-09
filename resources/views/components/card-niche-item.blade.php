@@ -20,16 +20,16 @@
     <div class="mb-6">
 
         <span class="plan-item-price-hint">
-            a partir de
+            a Partir de
         </span>
 
         <span class="plan-item-price">
             {{ $niche->minimum_price }}
         </span>
 
-        <span class="plan-item-price-monthly">
+        {{-- <span class="plan-item-price-monthly">
             /mês
-        </span>
+        </span> --}}
     </div>
 
     <a class="plan-item-cta" href="{{ route('niche.show', $niche) }}">
