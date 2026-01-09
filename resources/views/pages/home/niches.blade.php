@@ -4,11 +4,14 @@
 
         <div class="mb-16">
             <h2 class="section-title">
-                Planos Mensais Contínuos
+                {{-- Planos Mensais Contínuos --}}
+                Conheça Nossas Áreas de Atuação
             </h2>
 
             <p class="section-description">
-                Após o desenvolvimento do seu site, o plano mensal garante sua continuidade e cuidados técnicos.
+                Desenvolvimento do seu site e conheça o plano mensal que garante sua continuidade e cuidados técnicos
+                {{-- Após o desenvolvimento do seu site, o plano mensal garante sua continuidade e cuidados técnicos.
+                --}}
             </p>
         </div>
 
