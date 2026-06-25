@@ -1,29 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* Brand palette (claro) */
+    --color-brand-50: #eef2ff;
+    --color-brand-100: #e0e7ff;
+    --color-brand-200: #c7d2fe;
+    --color-brand-300: #a5b4fc;
+    --color-brand-400: #818cf8;
+    --color-brand-500: #6366f1;
+    --color-brand-600: #4f46e5;
+    --color-brand-700: #4338ca;
+    --color-accent-500: #8b5cf6;
+    --color-accent-600: #7c3aed;
 }
 
 @layer base {
     html {
         @apply scroll-smooth;
     }
+
+    body {
+        @apply bg-white text-slate-600 antialiased;
+        font-family: var(--font-sans);
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: var(--font-display);
+        @apply text-slate-900;
+    }
 }
 
 @layer components {
 
+    /* ---------- Tipografia de conteúdo ---------- */
     .content ul,
     .page-content ul {
         @apply list-disc mt-2 mb-4 pl-4;
     }
 
     .page-content h2 {
-        @apply text-2xl font-bold my-4;
+        @apply text-2xl font-bold my-4 text-slate-900;
     }
 
     .page-content h3 {
-        @apply text-xl font-bold my-4;
+        @apply text-xl font-bold my-4 text-slate-900;
     }
 
     .page-content p {
@@ -34,24 +58,50 @@
         @apply mb-0;
     }
 
+    /* ---------- Seções genéricas ---------- */
+    .section {
+        @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8;
+    }
+
+    .eyebrow {
+        @apply inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 text-brand-700 text-xs sm:text-sm font-semibold tracking-wide uppercase py-1.5 px-4;
+    }
+
     .section-title {
-        @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-4;
+        @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-slate-900 tracking-tight mb-4;
+        font-family: var(--font-display);
     }
 
     .section-description {
-        @apply max-w-2xl text-lg text-center text-gray-400 mx-auto;
+        @apply max-w-2xl text-base sm:text-lg text-center text-slate-500 mx-auto;
     }
 
+    /* ---------- Botões ---------- */
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm sm:text-base shadow-lg shadow-brand-600/25 transition-all duration-300 hover:-translate-y-0.5 py-3 px-6;
+    }
+
+    .btn-outline {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white hover:border-brand-400 hover:text-brand-700 text-slate-700 font-semibold text-sm sm:text-base transition-all duration-300 py-3 px-6;
+    }
+
+    .btn-whatsapp {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] hover:bg-[#1ebe5b] text-white font-semibold text-sm sm:text-base shadow-lg shadow-green-500/25 transition-all duration-300 hover:-translate-y-0.5 py-3 px-6;
+    }
+
+    /* ---------- Cards base ---------- */
+    .card {
+        @apply rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300;
+    }
+
+    /* ---------- Cases ---------- */
     .case-item {
-        @apply shadow-lg rounded-lg border border-purple-500/30 block bg-slate-900/50 backdrop-blur-sm mt-10 p-6;
+        @apply rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:shadow-brand-600/10 hover:-translate-y-1 transition-all duration-300 block overflow-hidden;
     }
 
-    .case-item-thumbnail {
-        @apply bg-red-500;
-    }
-
+    /* ---------- Planos / Nichos (card-niche-item) ---------- */
     .plans {
-        @apply py-20 px-4 sm:px-6 lg:px-8;
+        @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8;
     }
 
     .plans-wrapper {
@@ -59,23 +109,23 @@
     }
 
     .plan-item {
-        @apply transition duration-500 hover:-translate-y-2 shadow-2xl shadow-purple-500/20 border rounded-2xl relative bg-slate-900/50 backdrop-blur-sm p-8;
+        @apply transition-all duration-300 hover:-translate-y-2 shadow-sm hover:shadow-xl hover:shadow-brand-600/10 border rounded-2xl relative bg-white p-8;
     }
 
     .plan-item:nth-of-type(1) {
-        @apply border-blue-500/30;
+        @apply border-slate-200;
     }
 
     .plan-item:nth-of-type(2) {
-        @apply border-purple-500/50 ring-purple-500 ring-2;
+        @apply border-brand-400 ring-2 ring-brand-500/30 shadow-xl shadow-brand-600/10;
     }
 
     .plan-item:nth-of-type(3) {
-        @apply border-yellow-500/30;
+        @apply border-slate-200;
     }
 
     .plan-item-flag {
-        @apply -top-4 left-1/2 -translate-x-1/2 rounded-full absolute hidden bg-linear-to-r from-purple-600 to-pink-600 py-1 px-4;
+        @apply -top-4 left-1/2 -translate-x-1/2 rounded-full absolute hidden bg-linear-to-r from-brand-600 to-accent-600 py-1 px-4 shadow-lg shadow-brand-600/30;
     }
 
     .plan-item:nth-of-type(2) .plan-item-flag {
@@ -91,19 +141,19 @@
     }
 
     .plan-item-icon-wrapper {
-        @apply rounded-xl bg-slate-800/50 p-3;
+        @apply rounded-xl bg-brand-50 p-3;
     }
 
     .plan-item:nth-of-type(1) .plan-item-icon-wrapper {
-        @apply text-blue-400;
+        @apply text-brand-600;
     }
 
     .plan-item:nth-of-type(2) .plan-item-icon-wrapper {
-        @apply text-purple-400;
+        @apply text-accent-600;
     }
 
     .plan-item:nth-of-type(3) .plan-item-icon-wrapper {
-        @apply text-yellow-400;
+        @apply text-amber-500 bg-amber-50;
     }
 
     .plan-item-icon {
@@ -117,31 +167,31 @@
     }
 
     .plan-item-title {
-        @apply text-2xl font-bold text-white;
+        @apply text-2xl font-bold text-slate-900;
     }
 
     .plan-item-description {
-        @apply text-gray-400 mb-6;
+        @apply text-slate-500 mb-6;
     }
 
     .plan-item-price {
-        @apply text-4xl font-bold text-white;
+        @apply text-4xl font-extrabold text-slate-900;
     }
 
     .plan-item-price-hint {
-        @apply block font-bold text-white;
+        @apply block text-sm font-semibold text-slate-400;
     }
 
     .plan-item-price-monthly {
-        @apply text-gray-400 ml-2;
+        @apply text-slate-400 ml-2;
     }
 
     .plan-item-cta {
-        @apply w-full h-10 transition-all duration-300 border border-gray-700 hover:border-purple-500 inline-flex items-center justify-center rounded-md text-sm font-medium text-white hover:bg-purple-500/10 mb-8 py-2 px-4;
+        @apply w-full h-11 transition-all duration-300 border border-slate-300 hover:border-brand-500 inline-flex items-center justify-center rounded-xl text-sm font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700 mb-8 py-2 px-4;
     }
 
     .plan-item:nth-of-type(2) .plan-item-cta {
-        @apply border-0 bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700;
+        @apply border-0 text-white bg-linear-to-r from-brand-600 to-accent-600 hover:from-brand-700 hover:to-accent-600 shadow-lg shadow-brand-600/25;
     }
 
     .plan-item-list-item {
@@ -149,43 +199,45 @@
     }
 
     .plan-item-list-item-title {
-        @apply text-sm text-gray-300;
+        @apply text-sm text-slate-600;
     }
 
+    /* ---------- Recursos ---------- */
     .resources {
-        @apply py-20 px-4 sm:px-6 lg:px-8 bg-slate-950/50;
+        @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50;
     }
 
+    /* ---------- Como funciona (plan-detail-item) ---------- */
     .plan-detail-item {
-        @apply bg-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300;
+        @apply bg-white border rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300;
     }
 
     .plan-detail-item:nth-of-type(1) {
-        @apply border-blue-500/30;
+        @apply border-slate-200;
     }
 
     .plan-detail-item:nth-of-type(2) {
-        @apply border-purple-500/30;
+        @apply border-slate-200;
     }
 
     .plan-detail-item:nth-of-type(3) {
-        @apply border-yellow-500/30;
+        @apply border-slate-200;
     }
 
     .plan-detail-item-icon-wrapper {
-        @apply p-4 rounded-xl;
+        @apply p-4 rounded-2xl;
     }
 
     .plan-detail-item:nth-of-type(1) .plan-detail-item-icon-wrapper {
-        @apply text-blue-400 bg-blue-500/10;
+        @apply text-brand-600 bg-brand-50;
     }
 
     .plan-detail-item:nth-of-type(2) .plan-detail-item-icon-wrapper {
-        @apply text-purple-400 bg-purple-500/10;
+        @apply text-accent-600 bg-violet-50;
     }
 
     .plan-detail-item:nth-of-type(3) .plan-detail-item-icon-wrapper {
-        @apply text-yellow-400 bg-yellow-500/10;
+        @apply text-amber-500 bg-amber-50;
     }
 
     .plan-detail-item-icon {
@@ -199,23 +251,23 @@
     }
 
     .plan-detail-item-title {
-        @apply text-2xl font-bold text-blue-400 mb-3;
+        @apply text-2xl font-bold mb-3;
     }
 
     .plan-detail-item:nth-of-type(1) .plan-detail-item-title {
-        @apply text-blue-400;
+        @apply text-brand-700;
     }
 
     .plan-detail-item:nth-of-type(2) .plan-detail-item-title {
-        @apply text-purple-400;
+        @apply text-accent-600;
     }
 
     .plan-detail-item:nth-of-type(3) .plan-detail-item-title {
-        @apply text-yellow-400;
+        @apply text-amber-600;
     }
 
     .plan-detail-item-description {
-        @apply leading-relaxed block text-gray-300 mb-4;
+        @apply leading-relaxed block text-slate-600 mb-4;
     }
 
     .plan-detail-item-list-item-pointer {
@@ -223,39 +275,39 @@
     }
 
     .plan-detail-item:nth-of-type(1) .plan-detail-item-list-item-pointer {
-        @apply text-blue-400;
+        @apply text-brand-600;
     }
 
     .plan-detail-item:nth-of-type(2) .plan-detail-item-list-item-pointer {
-        @apply text-purple-400;
+        @apply text-accent-600;
     }
 
     .plan-detail-item:nth-of-type(3) .plan-detail-item-list-item-pointer {
-        @apply text-yellow-400;
+        @apply text-amber-500;
     }
 
     .plan-detail-item-wrapper-notice {
-        @apply shadow-lg border rounded-lg inline-flex gap-x-2 items-center bg-slate-900/50 mt-8 p-4;
+        @apply shadow-sm border rounded-xl inline-flex gap-x-2 items-center bg-slate-50 mt-8 p-4;
     }
 
     .plan-detail-item:nth-of-type(1) .plan-detail-item-wrapper-notice {
-        @apply border-blue-500/20;
+        @apply border-brand-200 bg-brand-50;
     }
 
     .plan-detail-item:nth-of-type(2) .plan-detail-item-wrapper-notice {
-        @apply border-purple-500/20;
+        @apply border-violet-200 bg-violet-50;
     }
 
     .plan-detail-item-notice-icon {
-        @apply w-8 h-8 fill-blue-400;
+        @apply w-8 h-8 fill-brand-600;
     }
 
     .plan-detail-item:nth-of-type(1) .plan-detail-item-notice-icon {
-        @apply fill-blue-400;
+        @apply fill-brand-600;
     }
 
     .plan-detail-item:nth-of-type(2) .plan-detail-item-notice-icon {
-        @apply fill-purple-400;
+        @apply fill-accent-600;
     }
 
     .plan-detail-item-notice-text {
@@ -263,27 +315,28 @@
     }
 
     .plan-detail-item:nth-of-type(1) .plan-detail-item-notice-text {
-        @apply text-blue-400;
+        @apply text-brand-700;
     }
 
     .plan-detail-item:nth-of-type(2) .plan-detail-item-notice-text {
-        @apply text-purple-400;
+        @apply text-accent-600;
     }
 
+    /* ---------- Objetivos ---------- */
     .objective-item {
-        @apply transition-colors border rounded-xl overflow-hidden backdrop-blur-sm bg-slate-900/50 cursor-pointer;
+        @apply transition-colors border rounded-2xl overflow-hidden bg-white shadow-sm cursor-pointer;
     }
 
     .objective-item-first {
-        @apply border-blue-500/20 hover:border-blue-500/40;
+        @apply border-slate-200 hover:border-brand-300;
     }
 
     .objective-item-second {
-        @apply border-purple-500/20 hover:border-purple-500/40;
+        @apply border-slate-200 hover:border-violet-300;
     }
 
     .objective-item-third {
-        @apply border-yellow-500/20 hover:border-yellow-500/40;
+        @apply border-slate-200 hover:border-amber-300;
     }
 
     .objective-item-icon {
@@ -291,15 +344,15 @@
     }
 
     .objective-item-first .objective-item-icon:nth-of-type(1) {
-        @apply block fill-blue-400;
+        @apply block fill-brand-600;
     }
 
     .objective-item-second .objective-item-icon:nth-of-type(2) {
-        @apply block fill-purple-400;
+        @apply block fill-accent-600;
     }
 
     .objective-item-third .objective-item-icon:nth-of-type(3) {
-        @apply block fill-yellow-400;
+        @apply block fill-amber-500;
     }
 
     .objective-item-content {
@@ -310,39 +363,70 @@
         @apply list-disc mt-2 pl-4;
     }
 
+    /* ---------- Depoimentos ---------- */
     .testimonials {
-        @apply bg-slate-950/50 py-20 px-4 sm:px-6 lg:px-8;
+        @apply bg-slate-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8;
     }
 
     .testimonial-item {
-        @apply w-full lg:w-4/12 px-4;
+        @apply w-full lg:w-4/12 px-4 mb-8;
     }
 
     .testimonial-item-wrapper {
-        @apply transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 border border-purple-500/20 rounded-2xl backdrop-blur-sm bg-slate-900/50 p-6;
+        @apply h-full transition-all duration-300 hover:shadow-xl hover:shadow-brand-600/10 hover:-translate-y-1 border border-slate-200 rounded-2xl bg-white p-6;
     }
 
     .testimonial-item-title {
-        @apply font-semibold text-white;
+        @apply font-bold text-slate-900;
     }
 
     .testimonial-item-office {
-        @apply text-sm text-gray-400;
+        @apply text-sm text-slate-400;
     }
 
     .testimonial-item-description {
-        @apply leading-relaxed text-gray-300 pl-6;
+        @apply leading-relaxed text-slate-600 pl-6;
     }
 
     .testimonial-item-plan {
-        @apply text-sm font-semibold text-purple-400;
+        @apply text-sm font-semibold text-brand-600;
     }
 
+    /* ---------- FAQ ---------- */
     .faq {
-        @apply py-20 px-4 sm:px-6 lg:px-8;
+        @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white;
     }
 }
 
+/* Swiper */
+.swiper-pagination-bullet {
+    background-color: #cbd5e1 !important;
+}
+
 .swiper-pagination-bullet-active {
-    background-color: #FFF !important;
+    background-color: #4f46e5 !important;
+}
+
+/* Botão flutuante do WhatsApp */
+@keyframes wa-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.wa-float {
+    animation: wa-pulse 2.2s infinite;
+}
+
+/* Padrão de pontos para fundos claros */
+.bg-dots {
+    background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
 }

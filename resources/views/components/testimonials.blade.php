@@ -1,14 +1,15 @@
-<section class="testimonials" id="depoimentos">
+<section class="testimonials" id="testemunhos">
 
     <div class="max-w-7xl mx-auto">
 
-        <div class="mb-16">
+        <div class="mb-14 text-center">
+            <span class="eyebrow mb-4">Quem confia</span>
             <h2 class="section-title">
                 Depoimentos
             </h2>
 
             <p class="section-description">
-                Veja como a Single Temas tem aumentado visibilidade de empresas e igrejas
+                Veja como a Single Temas tem aumentado a visibilidade de empresas e igrejas.
             </p>
         </div>
 

@@ -1,39 +1,37 @@
-<section class="bg-slate-950/50 py-20 px-4 sm:px-6 lg:px-8" id="processos">
+<section class="section bg-white" id="processos">
 
     <div class="max-w-7xl mx-auto">
 
-        <div class="mb-16">
+        <div class="mb-14 text-center">
+            <span class="eyebrow mb-4">Passo a passo</span>
             <h2 class="section-title">
                 Nossos Processos
             </h2>
 
             <p class="section-description">
-                Trabalhamos com um processo simples, organizado e transparente para garantir qualidade, prazo e clareza
-                em cada etapa
+                Um fluxo simples, organizado e transparente para garantir qualidade, prazo e clareza em cada etapa.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
             @foreach($processes as $process)
-                <div class="flex flex-col items-center">
+                <div class="group relative h-full rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:shadow-brand-600/10 hover:-translate-y-1 hover:border-brand-200 transition-all duration-300 p-6">
 
-                    <div
-                        class="w-14 h-14 hover:shadow-xl hover:shadow-purple-500/10 border border-purple-500/20 rounded-xl flex justify-center items-center bg-slate-800/50 p-3">
-                        <p class="font-black text-purple-500">
-                            {{ $process->order }}
-                        </p>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-linear-to-br from-brand-600 to-accent-600 text-white font-extrabold shadow-lg shadow-brand-600/25">
+                            {{ str_pad($process->order, 2, '0', STR_PAD_LEFT) }}
+                        </span>
+                        <span class="h-px flex-1 bg-linear-to-r from-brand-200 to-transparent"></span>
                     </div>
 
-                    <div class="mt-2">
-                        <h4 class="text-lg font-bold text-center text-white">
-                            {{  $process->name }}
-                        </h4>
+                    <h3 class="text-base font-bold text-slate-900 mb-1.5">
+                        {{ $process->name }}
+                    </h3>
 
-                        <p class="text-xs text-center text-white">
-                            {{  $process->description }}
-                        </p>
-                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        {{ $process->description }}
+                    </p>
                 </div>
             @endforeach
         </div>

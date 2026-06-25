@@ -1,73 +1,63 @@
 @if($product)
-    <section class="py-20 px-4 sm:px-6 lg:px-8" id="site">
+    <section class="section bg-slate-50" id="site">
 
         <div class="max-w-7xl mx-auto">
 
-            <div class="mb-16">
+            <div class="mb-14 text-center">
+                <span class="eyebrow mb-4">Tudo incluso</span>
                 <h2 class="section-title">
                     {{ $product->section_title }}
                 </h2>
 
                 <p class="section-description">
-                    {{  $product->description }}
+                    {{ $product->description }}
                 </p>
             </div>
 
-            <div
-                class="border border-purple-500/20 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-6 bg-slate-900/50 backdrop-blur-sm p-6 lg:p-10">
+            <div class="rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 bg-white border border-slate-200 shadow-sm">
 
-                <div class="pt-6">
+                <!-- imagem -->
+                <div class="relative min-h-[260px] bg-linear-to-br from-brand-600 to-accent-600">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=900&q=80"
+                        alt="{{ $product->section_title }}" class="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy" onerror="this.style.display='none'">
+                    <div class="absolute inset-0 bg-linear-to-t from-brand-900/40 to-transparent"></div>
 
-                    <h3 class="lg:text-xl font-semibold text-white">
-                        {{  $product->phrase }}
-
-                        <span class="block text-6xl lg:text-7xl font-black text-white">
-                            {{  $product->price }}
-                        </span>
-                    </h3>
-
-                    <div class="mt-6">
-                        <p class="font-medium text-white">
-                            Modelos de Sites:
-                        </p>
-                    </div>
-
-                    <div class="flex flex-wrap gap-4 mt-2">
-
-                        @foreach($product->modules as $module)
-                            <div
-                                class="transition hover:scale-110 border border-purple-500/30 rounded-full inline-flex items-center gap-2 bg-purple-600/20 hover:bg-purple-600/60 backdrop-blur-sm py-2 px-4">
-
-                                <span class="text-sm text-purple-300">
-                                    {{  $module['name'] }}
+                    <div class="relative h-full flex flex-col justify-end p-6 lg:p-10">
+                        <p class="text-white/80 text-sm font-medium mb-3">Tipos de site que desenvolvemos</p>
+                        <div class="flex flex-wrap gap-2">
+                            @foreach($product->modules as $module)
+                                <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium py-1.5 px-4">
+                                    {{ $module['name'] }}
                                 </span>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
                 </div>
 
-                <div class="mt-6">
-                    <p class="text-sm font-semibold text-gray-400 mb-3">
-                        Principais Recursos:
+                <!-- recursos -->
+                <div class="p-6 lg:p-10">
+                    <p class="text-sm font-bold uppercase tracking-wide text-brand-600 mb-5">
+                        Principais recursos
                     </p>
 
-                    <ul class="space-y-2">
+                    <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
                         @foreach($product->resources as $resource)
-                            <li class="flex items-start gap-2">
-                                <span class="plan-detail-item-list-item-pointer text-purple-400">•</span>
-                                <span class="text-gray-300">
-                                    {{  $resource['name'] }}
-                                </span>
+                            <li class="flex items-start gap-2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="w-5 h-5 text-brand-600 flex-shrink-0 mt-0.5">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                <span class="text-sm text-slate-600">{{ $resource['name'] }}</span>
                             </li>
                         @endforeach
                     </ul>
 
-                    <div class="lg:flex mt-12">
-                        <x-button-cta url="{{ $product->button_link }}?text={{ $product->button_text }}" />
-                    </div>
+                    <x-button-cta url="{{ $product->button_link }}?text={{ rawurlencode($product->button_text) }}"
+                        label="Quero desenvolver meu site" />
                 </div>
             </div>
-
         </div>
     </section>
 @endif

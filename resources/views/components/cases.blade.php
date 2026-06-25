@@ -1,54 +1,70 @@
-<section class="bg-slate-950/50 py-20 px-4 sm:px-6 lg:px-8" id="cases">
-
-    <style>
-        .case-item-thumbnail {
-            width: 100%;
-            height: 100px;
-            background-color: red;
-        }
-    </style>
+<section class="section bg-slate-50" id="cases">
 
     <div class="max-w-7xl mx-auto">
 
-        <div class="mb-16">
+        <div class="mb-14 text-center">
+            <span class="eyebrow mb-4">Portfólio</span>
             <h2 class="section-title">
                 Nossos Cases
             </h2>
 
             <p class="section-description">
-                Alguns projetos realizados ao decorrer da nossa trajetória
+                Alguns projetos que tivemos o prazer de desenvolver ao longo da nossa trajetória.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            @php
+                $fallbackImages = [
+                    'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=700&q=80',
+                    'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=700&q=80',
+                    'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=700&q=80',
+                    'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=700&q=80',
+                    'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80',
+                    'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=700&q=80',
+                ];
+            @endphp
 
             @foreach($projects as $project)
-                <div class="case-item">
-                    <div clas="case-item-thumbnail"
-                        style="width:90%;height:150px;margin-top:-56px;border:1px solid rgba(0, 0, 0, .2);border-radius:10px;overflow:hidden">
-                        @if($project->thumbnail)
-                            <img class="w-full h-full object-cover" src="{{ Storage::url($project->thumbnail) }}"
-                                alt="{{  $project->name }}" />
-                        @else
-                            <div class="w-full h-full flex items-end bg-purple-800 p-4">
+                @php
+                    $href = $project->link ? 'https://' . ltrim($project->link, 'https://') : '#';
+                    $img = $project->thumbnail ? Storage::url($project->thumbnail) : $fallbackImages[$loop->index % count($fallbackImages)];
+                @endphp
 
-                                <h6 class="text-xs font-black text-white/50">
-                                    {{  $project->name }}
-                                </h6>
-                            </div>
-                        @endif
+                <a href="{{ $href }}" target="_blank" rel="noopener noreferrer" class="group case-item">
+
+                    <!-- barra do navegador -->
+                    <div class="flex items-center gap-1.5 bg-slate-100 border-b border-slate-200 px-4 py-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-rose-300"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-300"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-300"></span>
+                        <span class="ml-3 truncate text-xs text-slate-400">{{ $project->link }}</span>
                     </div>
 
-                    <div class="flex justify-between items-center mt-4">
-                        <h6 class="text-lg font-bold text-white/80">
-                            {{  $project->name }}
-                        </h6>
-
-                        <p class="text-xs text-gray-400">
-                            {{ $project->link }}
-                        </p>
+                    <!-- imagem -->
+                    <div class="relative h-48 overflow-hidden bg-linear-to-br from-brand-500 to-accent-600">
+                        <img src="{{ $img }}" alt="{{ $project->name }}"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 flex items-end bg-linear-to-t from-slate-900/50 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-white">
+                                Visitar site
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                            </span>
+                        </div>
                     </div>
-                </div>
+
+                    <!-- rodapé -->
+                    <div class="flex items-center justify-between gap-2 p-5">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                            {{ $project->name }}
+                        </h3>
+                        <span class="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-lg bg-brand-50 text-brand-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </span>
+                    </div>
+                </a>
             @endforeach
         </div>
     </div>

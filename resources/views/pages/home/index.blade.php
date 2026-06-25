@@ -2,10 +2,18 @@
     <x-menu :menu="$menu" />
 
     <!-- hero -->
-    <x-hero cover="{{  $settings->banner_image }}" tag="{{  $settings->banner_tag }}" titleFirst="{{ $settings->banner_title_first }}" titleSecond="{{ $settings->banner_title_second }}"
-        description="{{ $settings->banner_description }}"
-        buttonText="Conhecer os Planos" buttonLink="#" />
+    <x-hero cover="{{ $settings->banner_image }}" tag="{{ $settings->banner_tag }}"
+        titleFirst="{{ $settings->banner_title_first }}" titleSecond="{{ $settings->banner_title_second }}"
+        description="{{ $settings->banner_description }}" buttonText="Ver Valores e Planos" buttonLink="#valores" />
     <!-- end hero -->
+
+    <!-- stats -->
+    <x-stats />
+    <!-- end stats -->
+
+    <!-- sobre / diferenciais -->
+    <x-about />
+    <!-- end sobre -->
 
     <!-- services -->
     @include('pages.home.services', ['settings' => $settings])
@@ -15,11 +23,11 @@
     <x-cases :projects="$projects" />
     <!-- end cases -->
 
-    <!-- how works -->
-    @include('pages.home.how-works', ['settings' => $settings])
-    <!-- end how works -->
+    <!-- valores -->
+    <x-pricing />
+    <!-- end valores -->
 
-    <!-- develop website -->
+    <!-- develop website (o que entregamos) -->
     <x-product :product="$productDevelopWebiste" />
     <!-- end develop website -->
 
@@ -27,15 +35,15 @@
     <x-processes />
     <!-- end process -->
 
-    <!-- template -->
-    <x-product :product="$productTemplate" />
-    <!-- end template -->
-
-    <!-- niches -->
-    @include('pages.home.niches', ['niches' => $niches])
-    <!-- end niches -->
+    <!-- planos de continuidade -->
+    <x-continuity-plans />
+    <!-- end planos de continuidade -->
 
     <!-- testimonials -->
     <x-testimonials :testimonials="$testimonials" />
     <!-- end testimonials -->
+
+    <!-- cta final -->
+    <x-cta-band />
+    <!-- end cta -->
 </x-layout.base>
