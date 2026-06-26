@@ -11,6 +11,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Pages\SettingsPage;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs;
@@ -139,7 +140,90 @@ class ManagePageHome extends SettingsPage
                                     ->minItems(3)
                                     ->maxItems(3),
 
-                            ])
+                            ]),
+                        Tab::make('Valores')
+                            ->schema([
+                                TextInput::make('prices_section_title')
+                                    ->label('Título da Seção')
+                                    ->required(),
+                                Textarea::make('prices_section_description')
+                                    ->label('Descrição da Seção'),
+                                Repeater::make('prices')
+                                    ->label('Planos / Valores')
+                                    ->collapsible()
+                                    ->itemLabel(fn (array $state): ?string => $state['name'] ?? null)
+                                    ->schema([
+                                        Grid::make(2)->schema([
+                                            TextInput::make('name')
+                                                ->label('Nome')
+                                                ->required(),
+                                            TextInput::make('tagline')
+                                                ->label('Subtítulo'),
+                                            TextInput::make('price')
+                                                ->label('Preço')
+                                                ->helperText('Ex.: R$ 890,00 ou "Sob consulta"')
+                                                ->required(),
+                                            TextInput::make('note')
+                                                ->label('Observação')
+                                                ->helperText('Ex.: pagamento único'),
+                                        ]),
+                                        Toggle::make('featured')
+                                            ->label('Destacar como "Mais popular"')
+                                            ->inline(false),
+                                        Repeater::make('features')
+                                            ->label('Itens inclusos')
+                                            ->simple(
+                                                TextInput::make('name')
+                                                    ->label('Item')
+                                                    ->required()
+                                            ),
+                                    ]),
+                            ]),
+                        Tab::make('Planos de Continuidade')
+                            ->schema([
+                                TextInput::make('continuity_section_title')
+                                    ->label('Título da Seção')
+                                    ->required(),
+                                Textarea::make('continuity_section_description')
+                                    ->label('Descrição da Seção'),
+                                Repeater::make('continuity_plans')
+                                    ->label('Planos mensais')
+                                    ->collapsible()
+                                    ->itemLabel(fn (array $state): ?string => $state['name'] ?? null)
+                                    ->schema([
+                                        Grid::make(2)->schema([
+                                            TextInput::make('name')
+                                                ->label('Nome')
+                                                ->required(),
+                                            TextInput::make('tagline')
+                                                ->label('Subtítulo'),
+                                            TextInput::make('price')
+                                                ->label('Preço')
+                                                ->helperText('Ex.: R$ 39,90')
+                                                ->required(),
+                                            TextInput::make('period')
+                                                ->label('Período')
+                                                ->helperText('Ex.: /mês'),
+                                        ]),
+                                        Toggle::make('featured')
+                                            ->label('Destacar como "Recomendado"')
+                                            ->inline(false),
+                                        Repeater::make('features')
+                                            ->label('Itens inclusos')
+                                            ->simple(
+                                                TextInput::make('name')
+                                                    ->label('Item')
+                                                    ->required()
+                                            ),
+                                    ]),
+                                TextInput::make('continuity_notice_title')
+                                    ->label('Título do aviso (domínio)')
+                                    ->required(),
+                                Textarea::make('continuity_notice_text')
+                                    ->label('Texto do aviso (domínio)')
+                                    ->helperText('A palavra "Registro.BR" vira link automaticamente.')
+                                    ->required(),
+                            ]),
                     ])
             ]);
     }

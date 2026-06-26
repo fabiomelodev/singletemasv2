@@ -32,6 +32,24 @@ class PageHomeSettings extends Settings
 
     public array $mode_objectives;
 
+    // Seção de Valores (projetos / pagamento único)
+    public string $prices_section_title;
+
+    public string $prices_section_description;
+
+    public array $prices;
+
+    // Seção de Planos de Continuidade (mensais)
+    public string $continuity_section_title;
+
+    public string $continuity_section_description;
+
+    public array $continuity_plans;
+
+    public string $continuity_notice_title;
+
+    public string $continuity_notice_text;
+
     public static function group(): string
     {
         return 'groupPageHome';
