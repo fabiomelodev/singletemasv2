@@ -1,7 +1,11 @@
 @props([
-    'phone' => '5511998043538',
+    'phone' => null,
     'message' => 'Olá! Vim pelo site e gostaria de mais informações.',
 ])
+
+@php
+    $phone = $phone ?? app(\App\Settings\GeneralSettings::class)->whatsapp_number;
+@endphp
 
 <div class="fixed bottom-5 right-5 z-[60] flex items-center gap-3" x-data="{ hint: true }" x-cloak>
 

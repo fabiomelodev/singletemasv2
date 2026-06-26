@@ -1,4 +1,7 @@
 @if($product)
+    @php
+        $whatsapp = app(\App\Settings\GeneralSettings::class)->whatsapp_number;
+    @endphp
     <section class="section bg-slate-50" id="site">
 
         <div class="max-w-7xl mx-auto">
@@ -54,7 +57,7 @@
                         @endforeach
                     </ul>
 
-                    <x-button-cta url="{{ $product->button_link }}?text={{ rawurlencode($product->button_text) }}"
+                    <x-button-cta url="https://wa.me/{{ $whatsapp }}?text={{ rawurlencode($product->button_text) }}"
                         label="Quero desenvolver meu site" />
                 </div>
             </div>

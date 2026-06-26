@@ -1,3 +1,7 @@
+@php
+    $whatsapp = app(\App\Settings\GeneralSettings::class)->whatsapp_number;
+@endphp
+
 <section class="section">
     <div class="max-w-7xl mx-auto">
         <div class="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-700 via-brand-600 to-accent-600 px-6 py-14 sm:px-12 sm:py-16 shadow-2xl shadow-brand-600/30">
@@ -18,7 +22,7 @@
                     compromisso.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/5511998043538?text=Ol%C3%A1!%20Quero%20tirar%20meu%20projeto%20do%20papel.%20Pode%20me%20ajudar%3F"
+                    <a href="https://wa.me/{{ $whatsapp }}?text=Ol%C3%A1!%20Quero%20tirar%20meu%20projeto%20do%20papel.%20Pode%20me%20ajudar%3F"
                         target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center justify-center gap-2 rounded-xl bg-white text-brand-700 font-bold text-base shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-50 py-3.5 px-7">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"

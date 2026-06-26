@@ -1,3 +1,7 @@
+@php
+    $whatsapp = app(\App\Settings\GeneralSettings::class)->whatsapp_number;
+@endphp
+
 <section class="faq" id="faq">
 
     <div class="max-w-4xl mx-auto">
@@ -66,7 +70,7 @@
 
         <div class="mt-12 text-center">
             <p class="text-slate-500 mb-4">Ainda tem dúvidas? Fale direto com a gente.</p>
-            <a href="https://wa.me/5511998043538?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os."
+            <a href="https://wa.me/{{ $whatsapp }}?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os."
                 target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

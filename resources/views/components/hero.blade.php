@@ -9,6 +9,8 @@
 ])
 
 @php
+    $whatsapp = app(\App\Settings\GeneralSettings::class)->whatsapp_number;
+
     if(!empty($cover)) {
        $cover = Storage::url($cover);
     } else {
@@ -61,7 +63,7 @@
                     </svg>
                 </a>
 
-                <a href="https://wa.me/5511998043538?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20o%20meu%20site."
+                <a href="https://wa.me/{{ $whatsapp }}?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20o%20meu%20site."
                     target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

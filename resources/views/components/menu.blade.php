@@ -1,4 +1,6 @@
 @php
+    $whatsapp = app(\App\Settings\GeneralSettings::class)->whatsapp_number;
+
     // Garante o item "Valores" no menu, posicionado logo após "Cases".
     $navItems = collect($menu->items ?? []);
     if (!$navItems->contains(fn ($i) => ($i['link'] ?? '') === '#valores')) {
@@ -82,7 +84,7 @@
                     </div>
 
                     <div>
-                        <a href="https://wa.me/5511998043538?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                        <a href="https://wa.me/{{ $whatsapp }}?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
                             target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -121,7 +123,7 @@
                     </svg>
                 </a>
 
-                <a href="https://wa.me/5511998043538?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                <a href="https://wa.me/{{ $whatsapp }}?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
                     target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-lg shadow-brand-600/25 transition-all duration-300 hover:-translate-y-0.5 py-2.5 px-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"

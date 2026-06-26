@@ -1,3 +1,7 @@
+@php
+    $whatsapp = app(\App\Settings\GeneralSettings::class)->whatsapp_number;
+@endphp
+
 <section class="section bg-white" id="servicos">
 
     <div class="max-w-7xl mx-auto">
@@ -48,7 +52,7 @@
         <!-- end mobile -->
 
         <div class="flex justify-center mt-12">
-            <x-button-cta url="https://wa.me/5511998043538?text=Quero%20falar%20com%20um%20especialista!" />
+            <x-button-cta url="https://wa.me/{{ $whatsapp }}?text=Quero%20falar%20com%20um%20especialista!" />
         </div>
     </div>
 </section>

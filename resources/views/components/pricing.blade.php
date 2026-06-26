@@ -2,7 +2,7 @@
 
 @php
     $settings = $settings ?? app(\App\Settings\PageHomeSettings::class);
-    $phone = '5511998043538';
+    $phone = app(\App\Settings\GeneralSettings::class)->whatsapp_number;
     $plans = $settings->prices ?? [];
     $icons = ['bolt', 'globe', 'cpu'];
 @endphp
