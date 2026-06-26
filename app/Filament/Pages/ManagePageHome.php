@@ -260,6 +260,14 @@ class ManagePageHome extends SettingsPage
                                     ->helperText('A palavra "Registro.BR" vira link automaticamente.')
                                     ->required(),
                             ]),
+                        Tab::make('Depoimentos')
+                            ->schema([
+                                Toggle::make('show_testimonials')
+                                    ->label('Exibir a seção de depoimentos no site')
+                                    ->helperText('Desative para ocultar a seção "Depoimentos" (e o item do menu) em todas as páginas.')
+                                    ->default(true)
+                                    ->inline(false),
+                            ]),
                     ])
             ]);
     }

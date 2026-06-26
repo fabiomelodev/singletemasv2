@@ -35,6 +35,9 @@ class PageHomeSettings extends Settings
     // Barra de estatísticas / números
     public array $stats;
 
+    // Visibilidade de seções
+    public bool $show_testimonials;
+
     // Seção de Valores (projetos / pagamento único)
     public string $prices_section_title;
 

@@ -10,6 +10,11 @@
             ? $navItems->slice(0, $pos + 1)->push($valores)->concat($navItems->slice($pos + 1))
             : $navItems->push($valores))->values();
     }
+
+    // Oculta o item "Testemunhos" do menu se a seção estiver desativada.
+    if (! (app(\App\Settings\PageHomeSettings::class)->show_testimonials ?? true)) {
+        $navItems = $navItems->reject(fn ($i) => ($i['link'] ?? '') === '#testemunhos')->values();
+    }
 @endphp
 
 <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"

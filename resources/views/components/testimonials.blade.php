@@ -1,3 +1,8 @@
+@php
+    $showTestimonials = app(\App\Settings\PageHomeSettings::class)->show_testimonials ?? true;
+@endphp
+
+@if($showTestimonials && filled($testimonials))
 <section class="testimonials" id="testemunhos">
 
     <div class="max-w-7xl mx-auto">
@@ -46,3 +51,4 @@
         <!-- end mobile -->
     </div>
 </section>
+@endif
