@@ -29,6 +29,8 @@ class ManagePageHome extends SettingsPage
 
     protected static string|UnitEnum|null $navigationGroup = 'Páginas';
 
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $navigationLabel = 'Página Inicial';
 
     protected static ?string $title = 'Página Inicial';
@@ -58,8 +60,7 @@ class ManagePageHome extends SettingsPage
                                     ->label('Imagem')
                                     ->image()
                                     ->disk('public')
-                                    ->visibility('publick')
-                                    ->required(),
+                                    ->visibility('public'),
                             ]),
                         Tab::make('Nossos Serviços')
                             ->schema([

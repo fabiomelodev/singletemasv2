@@ -29,6 +29,8 @@ class FaqResource extends Resource
 
     protected static ?int $navigationSort = 2;
 
+    protected static ?string $navigationLabel = 'Faq';
+
     public static function getNavigationBadge(): ?string
     {
         return static::getEloquentQuery()->count();

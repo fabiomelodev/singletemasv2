@@ -18,6 +18,8 @@ class ManageGeneralSettings extends SettingsPage
 
     protected static string|UnitEnum|null $navigationGroup = 'Configurações';
 
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $navigationLabel = 'Configurações Gerais';
 
     protected static ?string $title = 'Configurações Gerais';

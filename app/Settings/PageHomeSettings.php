@@ -14,7 +14,7 @@ class PageHomeSettings extends Settings
 
     public string $banner_description;
 
-    public string $banner_image;
+    public ?string $banner_image;
 
     public string $section_service_title;
 
