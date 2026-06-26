@@ -32,6 +32,9 @@ class PageHomeSettings extends Settings
 
     public array $mode_objectives;
 
+    // Barra de estatísticas / números
+    public array $stats;
+
     // Seção de Valores (projetos / pagamento único)
     public string $prices_section_title;
 

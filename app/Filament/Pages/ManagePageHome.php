@@ -9,6 +9,7 @@ use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -85,6 +86,41 @@ class ManagePageHome extends SettingsPage
                                     ->helperText('Escolher os cases para destacar na página inicial')
                                     ->options(Project::orderBy('name', 'asc')->pluck('name', 'id'))
                                     ->required()
+                            ]),
+                        Tab::make('Estatísticas')
+                            ->schema([
+                                Repeater::make('stats')
+                                    ->label('Indicadores')
+                                    ->collapsible()
+                                    ->itemLabel(fn (array $state): ?string => trim(($state['value'] ?? '') . ' ' . ($state['label'] ?? '')) ?: null)
+                                    ->minItems(1)
+                                    ->maxItems(8)
+                                    ->schema([
+                                        Grid::make(3)->schema([
+                                            TextInput::make('value')
+                                                ->label('Número')
+                                                ->helperText('Ex.: +30, 100%, 3 meses')
+                                                ->required(),
+                                            TextInput::make('label')
+                                                ->label('Descrição')
+                                                ->helperText('Ex.: Projetos entregues')
+                                                ->required(),
+                                            Select::make('icon')
+                                                ->label('Ícone')
+                                                ->options([
+                                                    'rocket' => 'Foguete',
+                                                    'clock' => 'Relógio',
+                                                    'shield' => 'Escudo',
+                                                    'monitor' => 'Monitor / Tela',
+                                                    'star' => 'Estrela',
+                                                    'users' => 'Pessoas',
+                                                    'trophy' => 'Troféu',
+                                                    'chart' => 'Gráfico',
+                                                ])
+                                                ->default('rocket')
+                                                ->required(),
+                                        ]),
+                                    ]),
                             ]),
                         Tab::make('Modelo de Trabalho')
                             ->schema([
