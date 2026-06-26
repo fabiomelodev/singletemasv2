@@ -5,7 +5,6 @@ namespace App\Filament\Resources\Products\Schemas;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Components\Section;
@@ -72,10 +71,6 @@ class ProductForm
                             ->required(),
                         TextInput::make('button_link')
                             ->label('Link do Botão')
-                            ->required(),
-                        Select::make('niche_id')
-                            ->label('Nicho')
-                            ->relationship('niche', 'name')
                             ->required(),
                     ])
             ]);

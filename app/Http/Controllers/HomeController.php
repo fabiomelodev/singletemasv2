@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Faq;
 use App\Models\Menu;
-use App\Models\Niche;
 use App\Models\Page;
 use App\Models\Product;
 use App\Models\Project;
@@ -28,8 +27,6 @@ class HomeController extends Controller
 
         $productTemplate = Product::where('slug', 'site-modelo-pronto')->first();
 
-        $niches = Niche::active()->get();
-
         $testimonials = Testimonial::inRandomOrder()->get();
 
         return view('pages.home.index', [
@@ -38,7 +35,6 @@ class HomeController extends Controller
             'projects' => $projects,
             'productDevelopWebiste' => $productDevelopWebiste,
             'productTemplate' => $productTemplate,
-            'niches' => $niches,
             'testimonials' => $testimonials
         ]);
     }

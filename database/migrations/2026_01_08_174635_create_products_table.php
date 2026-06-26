@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Niche;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,7 +22,6 @@ return new class extends Migration {
             $table->json('resources')->nullable();
             $table->string('button_text');
             $table->string('button_link');
-            $table->foreignIdFor(Niche::class);
             $table->timestamps();
         });
     }

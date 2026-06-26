@@ -80,9 +80,7 @@ class ProductSeeder extends Seeder
                     ],
                 ]),
                 'button_text' => 'Quero desenvolver o meu site. Como posso prosseguir?',
-                'button_link' => 'https://wa.me/5511998043538',
-                'niche_id' => 1,
-                'created_at' => now(),
+                'button_link' => 'https://wa.me/5511998043538',                'created_at' => now(),
                 'updated_at' => now(),
             ],
 
@@ -124,9 +122,7 @@ class ProductSeeder extends Seeder
                     ],
                 ]),
                 'button_text' => 'Quero comprar um site pronto. Como posso prosseguir?',
-                'button_link' => 'https://wa.me/5511998043538',
-                'niche_id' => 1,
-                'created_at' => now(),
+                'button_link' => 'https://wa.me/5511998043538',                'created_at' => now(),
                 'updated_at' => now(),
             ],
         ]);

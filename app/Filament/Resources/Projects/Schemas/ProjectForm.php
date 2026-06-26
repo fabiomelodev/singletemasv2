@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\Projects\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
@@ -32,10 +31,6 @@ class ProjectForm
                             ->image()
                             ->disk('public')
                             ->visibility('public'),
-                        Select::make('niche_id')
-                            ->label('Nicho')
-                            ->relationship('niche', 'name')
-                            ->required(),
                         Toggle::make('status')
                             ->required(),
                     ])

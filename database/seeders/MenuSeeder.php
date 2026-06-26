@@ -52,40 +52,6 @@ class MenuSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-
-            [
-                'name' => 'Menu Single Nicho',
-                'slug' => 'menu-single-nicho',
-                'items' => json_encode([
-                    [
-                        'name' => 'Planos',
-                        'link' => '#planos'
-                    ],
-
-                    [
-                        'name' => 'Recursos',
-                        'link' => '#recursos'
-                    ],
-
-                    [
-                        'name' => 'Detalhes',
-                        'link' => '#detalhes'
-                    ],
-
-                    [
-                        'name' => 'Testemunhos',
-                        'link' => '#testemunhos'
-                    ],
-
-                    [
-                        'name' => 'FAQ',
-                        'link' => '#faq'
-                    ]
-                ]),
-                'status' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
         ]);
     }
 }

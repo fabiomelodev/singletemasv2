@@ -4,7 +4,6 @@ namespace App\Filament\Resources\Testimonials\Schemas;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
@@ -38,10 +37,6 @@ class TestimonialForm
                             ->required(),
                         TextInput::make('plan')
                             ->label('Plano')
-                            ->required(),
-                        Select::make('niche_id')
-                            ->label('Nicho')
-                            ->relationship('niche', 'name')
                             ->required(),
                     ])
             ]);
