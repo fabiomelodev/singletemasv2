@@ -6,8 +6,10 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\IconColumn;
+use Filament\Support\Enums\FontWeight;
+use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 
 class MenusTable
@@ -15,24 +17,38 @@ class MenusTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->striped()
             ->columns([
                 TextColumn::make('name')
-                    ->label('Nome'),
-                TextColumn::make('slug'),
-                IconColumn::make('status')
-                    ->boolean(),
+                    ->label('Menu')
+                    ->icon(Heroicon::OutlinedBars3)
+                    ->weight(FontWeight::SemiBold)
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('slug')
+                    ->label('Identificador')
+                    ->badge()
+                    ->color('gray')
+                    ->copyable(),
+                TextColumn::make('items')
+                    ->label('Itens')
+                    ->badge()
+                    ->color('info')
+                    ->icon(Heroicon::OutlinedQueueList)
+                    ->formatStateUsing(fn ($state) => is_array($state) ? count($state) : 0),
+                ToggleColumn::make('status')
+                    ->label('Ativo'),
                 TextColumn::make('created_at')
                     ->label('Criado em')
                     ->dateTime('d/m/Y')
-            ])
-            ->filters([
-                //
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->recordActions([
                 EditAction::make()
                     ->iconButton(),
                 DeleteAction::make()
-                    ->iconButton()
+                    ->iconButton(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

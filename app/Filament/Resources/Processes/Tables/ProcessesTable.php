@@ -6,6 +6,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Support\Enums\FontWeight;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -17,16 +18,24 @@ class ProcessesTable
             ->paginated(false)
             ->reorderable('order')
             ->columns([
-                TextColumn::make('name')
-                    ->label('Nome'),
                 TextColumn::make('order')
-                    ->label('Ordem'),
+                    ->label('Ordem')
+                    ->badge()
+                    ->color('primary'),
+                TextColumn::make('name')
+                    ->label('Etapa')
+                    ->weight(FontWeight::SemiBold)
+                    ->searchable(),
+                TextColumn::make('description')
+                    ->label('Descrição')
+                    ->limit(70)
+                    ->wrap()
+                    ->color('gray')
+                    ->toggleable(),
                 TextColumn::make('created_at')
                     ->label('Criado em')
                     ->dateTime('d/m/Y')
-            ])
-            ->filters([
-                //
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->recordActions([
                 EditAction::make()
