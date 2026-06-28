@@ -21,7 +21,8 @@
     x-data="{ scrolled: false, menuMobile: false }" x-init="
         window.addEventListener('scroll', () => {
             scrolled = window.scrollY > 30
-        })
+        });
+        $watch('menuMobile', open => { document.body.style.overflowY = open ? 'hidden' : '' })
     "
     :class="scrolled ? 'backdrop-blur-md bg-white/90 py-3 shadow-md shadow-slate-200/60 border-b border-slate-100' : 'bg-white/70 backdrop-blur-sm py-4 border-b border-transparent'">
 
