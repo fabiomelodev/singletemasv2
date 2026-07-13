@@ -56,6 +56,7 @@ class PageHomeSettings extends Settings
 
     public string $continuity_notice_text;
 
+
     public static function group(): string
     {
         return 'groupPageHome';

@@ -31,7 +31,12 @@ class ManageGeneralSettings extends SettingsPage
                 TextInput::make('whatsapp_number')
                     ->label('Número do WhatsApp')
                     ->helperText('Apenas números, com código do país (55) e DDD. Ex.: 5511998043538. Usado em todos os botões de WhatsApp do site.')
+                    ->columnSpanFull()
                     ->required(),
+                TextInput::make('cnpj')
+                    ->label('CNPJ')
+                    ->helperText('Cadastro Nacional da Pessoa Jurídica. Usado para fins fiscais e de identificação.')
+                    ->columnSpanFull()
             ]);
     }
 }

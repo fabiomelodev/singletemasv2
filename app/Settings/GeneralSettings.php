@@ -8,6 +8,8 @@ class GeneralSettings extends Settings
 {
     public string $whatsapp_number;
 
+    public string $cnpj;
+
     public static function group(): string
     {
         return 'general';
